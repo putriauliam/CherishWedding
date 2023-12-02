@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css','resources/js/app.js')
   <script src="https://kit.fontawesome.com/6b738b2603.js" crossorigin="anonymous"></script>
-  <link rel="icon" href="img/logo.ico" type="image/x-icon">
+  <link rel="icon" href="img/logo.png">
   <title>VENDOR</title>
 </head>
 <body>
