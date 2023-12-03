@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('beranda');
 });
+Route::get('/vendor', function () {
+    return view('vendor');
+});
+Route::get('/tentang', function () {
+    return view('tentang');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+
