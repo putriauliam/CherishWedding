@@ -10,11 +10,12 @@
 </head>
 <body>
 <!-- navbar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<section class="bg-center bg-no-repeat bg-blend-multiply" style="background-image: url('/img/wedding1.jpg');">
+<nav class="bg-opacity-50 border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="img/logo.png" class="h-10" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Cherish Wedding</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Cherish Wedding</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -23,15 +24,15 @@
         </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-small flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="font-small flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-opacity-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
-          <a href="/" class="block font-medium border-b-2 border-gray-900">BERANDA</a>
+          <a href="/" class="block font-medium border-b-2 border-white-900 text-white">BERANDA</a>
         </li>
         <li>
-          <a href="/vendor" class="block  ">VENDOR</a>
+          <a href="/vendor" class="block text-white ">VENDOR</a>
         </li>
         <li>
-          <a href="/tentang" class="block">TENTANG KAMI</a>
+          <a href="/tentang" class="block text-white">TENTANG KAMI</a>
         </li>
         <li>
           <a href="#" class="block text-red-500 font-medium py-0.5 px-2 border-2 border-red-600 rounded-md hover:bg-red-600 hover:text-white">MASUK</a>
@@ -40,5 +41,63 @@
     </div>
   </div>
 </nav>
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Cherish Wedding</h1>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"> 
+        </div>
+    </div>
+</section>
+
+<p class="text-3xl text-gray-900 underline dark:text-white text-center font-bold mt-10 mb-9">Kategori</p>
+
+<!--Card Kategori-->
+<div class="flex justify-center">
+  <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 max-w-3xl">
+    <div class="bg-white col-span-1 row-span-1">
+      <div class="px-5 pb-5">
+        <a href="#">
+          <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">MUA</h5>
+        </a>
+        <a href="#">
+          <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/800x1000/?makeup' alt="makeup image" />
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-white col-span-1 row-span-1">
+      <div class="px-5 pb-5">
+        <a href="#">
+          <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Fotografer</h5>
+        </a>
+        <a href="#">
+          <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/800x1000/?photography' alt="photographer image" />
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-white col-span-1 row-span-1">
+      <div class="px-5 pb-5">
+        <a href="#">
+          <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Venue</h5>
+        </a>
+        <a href="#">
+          <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/1500x1200/?venue' alt="venue image" />
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-white col-span-1 row-span-1">
+      <div class="px-5 pb-5">
+        <a href="#">
+          <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Catering</h5>
+        </a>
+        <a href="#">
+          <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?catering' alt="catering image" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
