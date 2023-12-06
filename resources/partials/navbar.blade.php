@@ -1,46 +1,43 @@
-<!--navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-  <div class="container">
-    <a class="navbar-brand" href="/">WPU Blog</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<!-- navbar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/logo.png" class="h-10" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Cherish Wedding</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link {{ ($active === "home") ? 'active' : '' }}" href="/">Home</a>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-small flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="/" class="block ">BERANDA</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ ($active === "about") ? 'active' : '' }}" href="/about">About</a>
+        <li>
+          <a href="/vendor" class="block font-medium border-b-2 border-gray-900 ">VENDOR</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ ($active === 'posts') ? 'active' : '' }}" href="/posts">Blog</a>
+        <li>
+          <a href="/tentang" class="block">TENTANG KAMI</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {{ ($active === 'categories') ? 'active' : '' }}" href="/categories">Categories</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto">
-        @auth
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Welcome back, {{ auth()->user()->name }}
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a>
-            <div class="dropdown-divider"></div>
-            <form action="/logout" method="post">
-              @csrf
-              <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
-            </form>
-        </li>
-        @else
-        <li class="nav-item">
-          <a href="/login" class="nav-link {{ ($active === 'login') ? 'active' : '' }}"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        <li>
+          <a href="#" class="block text-red-500 font-medium py-0.5 px-2 border-2 border-red-600 rounded-md hover:bg-red-600 hover:text-white">MASUK</a>
         </li>
         @endauth
       </ul>
     </div>
   </div>
-</nav>
-<!--end navbar-->
+  <!-- searchbar -->
+<div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
+    <div class="flex items-center justify-end p-4">
+        <div class="relative text-gray-600">
+            <i class="absolute top-0 mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass" style="color: #d1d1d1;"></i>
+            <input type="search" name="search" placeholder="Cari Vendor" class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none">
+        </div>
+    </div>
+    <button class="bg-gray-500 text-white  rounded-full p-2 py-1 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
+        <i class="fa-solid fa-heart"></i>
+    </button>
+</div>
