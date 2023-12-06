@@ -39,6 +39,18 @@
       </ul>
     </div>
   </div>
+  <!-- searchbar -->
+<div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
+    <div class="flex items-center justify-end p-4">
+        <div class="relative text-gray-600">
+            <i class="absolute top-0 mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass" style="color: #d1d1d1;"></i>
+            <input type="search" name="search" placeholder="Cari Vendor" class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none">
+        </div>
+    </div>
+    <button class="bg-gray-500 text-white  rounded-full p-2 py-1 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
+        <i class="fa-solid fa-heart"></i>
+    </button>
+</div>
 </nav>
 </body>
 </html>
