@@ -22,7 +22,7 @@ Route::get('/vendor', function () {
 Route::get('/tentang', function () {
     return view('tentang');
 });
-Route::get('/login', function () {
-    return view('login');
+Route::get('/daftar', function () {
+    return view('daftar');
 });
 
