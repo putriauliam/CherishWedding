@@ -25,4 +25,7 @@ Route::get('/tentang', function () {
 Route::get('/daftar', function () {
     return view('daftar');
 });
+Route::get('/masuk', function () {
+    return view('masuk');
+});
 
