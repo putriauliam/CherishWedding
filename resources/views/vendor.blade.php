@@ -19,8 +19,8 @@
 <div class="container max-w-xs">
   <!-- filter -->
   <div class="filter">
-      <a href="#"
-          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <div
+          class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <div class="flex items-center justify-between">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">FILTER</h5>
               <i class="fa-solid fa-filter" style="color: #c2c2c2;"></i>
@@ -38,7 +38,7 @@
               </svg>
           </button>
 
-          <!-- Dropdown menu -->
+          <!-- Dropdown kategori -->
           <div id="dropdownDefaultCheckbox"
               class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
               <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200"
@@ -71,8 +71,8 @@
                   </li>
               </ul>
           </div>
-          <!-- kategori -->
-          <button id="dropdownCheckboxButton" data-dropdown-toggle="dropdownDefaultCheckbox"
+          <!-- kota -->
+          <button id="dropdownCheckboxButton2" data-dropdown-toggle="dropdownDefaultCheckbox2"
               class="text-black shadow hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               type="button">KOTA<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 10 6">
@@ -81,11 +81,11 @@
               </svg>
           </button>
 
-          <!-- Dropdown menu -->
-          <div id="dropdownDefaultCheckbox"
+          <!-- Dropdown kota -->
+          <div id="dropdownDefaultCheckbox2"
               class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
               <ul class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200"
-                  aria-labelledby="dropdownCheckboxButton">
+                  aria-labelledby="dropdownCheckboxButton2">
                   <li>
                       <div class="flex items-center">
                           <input id="checkbox-item-1" type="checkbox" value=""
@@ -115,24 +115,13 @@
               </ul>
           </div>
 
-      </a>
+          <!-- button -->
+          <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">TERAPKAN</button>
+      </div>
   </div>
   </a>
 </div>
 
-<!-- card -->
-<div class="card">
-  </button>
-  <button type="button"
-      class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 me-2 mb-2">
-      <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-          viewBox="0 0 18 19">
-          <path fill-rule="evenodd"
-              d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z"
-              clip-rule="evenodd" />
-      </svg>
-</div>
-</div>
 
 {{-- <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -149,6 +138,22 @@
           }
       });
   });
+  // kota
+    document.addEventListener('DOMContentLoaded', function () {
+      const button = document.getElementById('dropdownCheckboxButton2');
+      const dropdown = document.getElementById('dropdownDefaultCheckbox2');
+
+      button.addEventListener('click', function () {
+          dropdown.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function (event) {
+          if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+              dropdown.classList.add('hidden');
+          }
+      });
+  });
+  
 
 </script> --}}
 
