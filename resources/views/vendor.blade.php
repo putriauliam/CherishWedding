@@ -85,27 +85,27 @@
             </div>
         </div>
     </div>
-        <!-- card -->
-        <div class="">
+    <!-- card -->
+    <div class="">
         <h5 class="mb-2 ml-8 text-2xl font-bold tracking-tight text-gray-900">Semua Kategori</h5>
-        <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap justify-between">
+        <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap">
             <!-- max-w-6xl -->
                 <!-- SubCard -->
-                <div class="card w-44 bg-gray-200 mb-3 mr-2 relative block">
-                        <div class="absolute right-2 mt-4 mr-2 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                <div class="card w-44 bg-gray-200 mb-3 mr-2 relative block ">
+                        <div class="absolute right-2 mt-4 mr-2 w-7 h-7 flex items-center justify-center rounded-full bg-white border border-gray-200">
                             <i class="fas fa-heart text-black"></i>
-                        </div>
+                        </div class="flex">
                             <img class="p-3 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup' alt="makeup image" />
-                            <a href="#" class="flex items-center px-5"></a>
                         <!-- profil vendor -->
-                        <div class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
-                            <img class="w-8 h-8" src="img/putri.png" alt="PUTRI">
-                        </div>
-                        <div class="ml-1">
-                            <p class="text-xs font-thin">
-                                Sewa venue Bojongsoang
+                        <div class=" flex items-center">
+                            <img class="ml-3 w-8 h-8 rounded-full justify-between" src="img/putri.png" alt="PUTRI">
+                            <p class="pl-2 text-xs font-thin">
+                                Sewa venue Melati
                             </p>
                         </div>
+                        <div class="ml-1">
+                        </div>
+                        <!-- kategori dan alamat vendor -->
                     <div class="mt-2 mb-4">
                         <p class="px-2 flex text-xs font-hard font-thin dark:text-white">VENUE</p>
                         <p class="px-2 flex text-xs font-medium font-thin dark:text-white">BANDUNG</p>
@@ -114,34 +114,62 @@
         </div>
     </div>
 </div>
-    <!-- card -->
-    <div class="">
-        <h5 class="mb-2 ml-8 text-2xl font-bold tracking-tight text-gray-900">Semua Kategori</h5>
-        <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap justify-between">
-            <!-- max-w-6xl -->
-                <!-- SubCard -->
-                <div class="card w-44 bg-gray-200 mb-3 mr-2 relative block">
-                        <div class="absolute right-2 mt-4 mr-2 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
-                            <i class="fas fa-heart text-black"></i>
-                        </div>
-                            <img class="p-3 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup' alt="makeup image" />
-                            <a href="#" class="flex items-center px-5"></a>
-                        <!-- profil vendor -->
-                        <div class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
-                            <img class="w-8 h-8" src="img/putri.png" alt="PUTRI">
-                        </div>
-                        <div class="ml-1">
-                            <p class="text-xs font-thin">
-                                Sewa venue Bojongsoang
-                            </p>
-                        </div>
-                    <div class="mt-2 mb-4">
-                        <p class="px-2 flex text-xs font-hard font-thin dark:text-white">VENUE</p>
-                        <p class="px-2 flex text-xs font-medium font-thin dark:text-white">BANDUNG</p>
-                    </div>
+<!-- footer -->
+<footer class="bg-gray-100 dark:bg-gray-900">
+    <div class="flex justify-between p-12">
+                <!-- Resources -->
+                <div class="justify-items-start">
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-2">
+                            <a href="#" class="flex items-center">
+                                <img src="img/logo.png" class="h-8 me-3" alt="FlowBite Logo" />
+                                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Cherish Wedding</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">CHERISH WEDDING © 2023</a>
+                        </li>
+                    </ul>
                 </div>
+                <!-- Follow us -->
+                <div class="">
+                    <ul class="font-medium">
+                                <li class="mb-4 flex items-center">
+                                    <div class="relative flex items-center">
+                                        <div class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                            <p class="ml-12 mb-0">Jl. Dr. Setiabudi No. 193 Bandung</p>
+                                    </div>
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <div class="relative flex items-center">
+                                        <div class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                        </div>
+                                            <p class="ml-12 mb-0">+62. 5555.5555.5555</p>
+                                    </div>
+                                </li>
+                                <li class="mb-4 flex items-center">
+                            <div class="relative flex items-center">
+                                <div class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <p class="ml-12 mb-0">Cherishwedding@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navbar -->
+                <div class="text-center">
+                    <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Beranda</h2>
+                    <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Vendor</h2>
+                    <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Tentang Kami</h2>
+                </div>
+            </div>
         </div>
     </div>
+</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 @endsection
