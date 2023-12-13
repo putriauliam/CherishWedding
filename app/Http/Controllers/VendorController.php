@@ -16,6 +16,12 @@ class VendorController extends Controller
         //
     }
 
+    public function rekomendasi()
+    {
+        //
+    }
+
+
     /**
      * Show the form for creating a new resource.
      */
