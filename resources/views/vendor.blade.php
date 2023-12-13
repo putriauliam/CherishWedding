@@ -85,8 +85,9 @@
             </div>
         </div>
     </div>
-        <!-- card -->
-        <div class="">
+</div>
+    <!-- card -->
+    <div class="">
         <h5 class="mb-2 ml-8 text-2xl font-bold tracking-tight text-gray-900">Semua Kategori</h5>
         <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap justify-between">
             <!-- max-w-6xl -->
@@ -113,7 +114,6 @@
                 </div>
         </div>
     </div>
-</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 @endsection
