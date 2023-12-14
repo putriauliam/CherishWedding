@@ -13,7 +13,12 @@ class VendorController extends Controller
      */
     public function index()
     {
-        //
+        $title = '';
+        return view('vendor', [
+            "title" => "Vendor" . $title,
+            "active" => "vendor",
+            "vendor" => Vendor::all()
+        ]);
     }
 
     public function rekomendasi()

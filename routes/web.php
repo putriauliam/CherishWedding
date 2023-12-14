@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\VendorController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -19,11 +20,14 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('beranda');
 });
-Route::get('/vendor', function () {
-    return view('vendor');
-});
+// Route::get('/vendor', function () {
+//     return view('vendor');
+// });
 Route::get('/tentang', function () {
     return view('tentang');
+});
+Route::get('/detailVendor', function () {
+    return view('detailVendor');
 });
 // Route::get('/daftar', function () {
 //     return view('daftar');
@@ -46,4 +50,7 @@ Route::controller(GoogleController::class)->group(function(){
     Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
     Route::get('auth/google/callback', 'handleGoogleCallback');
 });
+
+// vendor
+Route::get('/vendor', [VendorController::class, 'index']);
 

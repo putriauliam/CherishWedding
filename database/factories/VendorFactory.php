@@ -26,7 +26,8 @@ class VendorFactory extends Factory
                         ->implode(''),
             'price' => $this->faker->numberBetween(150000, 10000000),
             'city_id' => mt_rand(1,3),
-            'category_id' => mt_rand(1,3)
+            'category_id' => mt_rand(1,3),
+            'image' => "venue.jpg"
         ];
     }
 }
