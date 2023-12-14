@@ -35,7 +35,7 @@
                     <ul
                         class="font-small flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-opacity-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="/" class="block font-medium border-b-2 border-white-900 text-white">BERANDA</a>
+                            <a href="/" class="block font-medium border-b-2 border-white-900 text-white active">BERANDA</a>
                         </li>
                         <li>
                             <a href="/vendor" class="block text-white ">VENDOR</a>

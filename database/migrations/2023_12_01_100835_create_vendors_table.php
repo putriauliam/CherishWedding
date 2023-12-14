@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('koordinat_maps');
             $table->text('detail');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
