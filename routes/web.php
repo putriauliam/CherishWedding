@@ -25,6 +25,9 @@ Route::get('/vendor', function () {
 Route::get('/tentang', function () {
     return view('tentang');
 });
+Route::get('/detailVendor', function () {
+    return view('detailVendor');
+});
 // Route::get('/daftar', function () {
 //     return view('daftar');
 // });
