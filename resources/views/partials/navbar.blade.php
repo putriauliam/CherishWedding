@@ -20,7 +20,7 @@
                     <a href="/" class="block ">BERANDA</a>
                 </li>
                 <li>
-                    <a href="/vendor" class="block  ">VENDOR</a>
+                    <a href="/vendor" class="block font-medium border-b-2 border-gray-900  {{ $active === 'vendor' ? 'active' : '' }}">VENDOR</a>
                 </li>
                 <li>
                     <a href="/tentang" class="block ">TENTANG KAMI</a>

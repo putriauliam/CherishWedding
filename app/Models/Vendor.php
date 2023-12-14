@@ -21,8 +21,8 @@ class Vendor extends Model
         return $this->hasMany(Favorite::class);
     }
 
-    public function kota()
+    public function city()
     {
-        return $this->belongsTo(Kota::class);
+        return $this->belongsTo(City::class);
     }
 }
