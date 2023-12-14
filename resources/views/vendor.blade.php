@@ -114,9 +114,8 @@
         </div>
     </div>
 </div>
-<!-- footer -->
-<footer class="bg-gray-100 dark:bg-gray-900">
-    <div class="flex justify-between p-12">
+<div class="footer bg-gray-100 dark:bg-gray-900">
+<div class="flex justify-between p-12">
                 <!-- Resources -->
                 <div class="justify-items-start">
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -169,6 +168,7 @@
             </div>
         </div>
     </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 @endsection
