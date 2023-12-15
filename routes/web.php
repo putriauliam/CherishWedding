@@ -24,7 +24,10 @@ Route::get('/', function () {
 //     return view('vendor');
 // });
 Route::get('/tentang', function () {
-    return view('tentang');
+    return view('tentang', [
+        'title' => 'Tentang Kami',
+        'active' => 'tentang'
+    ]);
 });
 Route::get('/detailVendor', function () {
     return view('detailVendor');
