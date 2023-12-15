@@ -112,7 +112,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">MUA</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup' alt="makeup image" />
+             <img class="p-8 rounded-t-lg" src="img/MUA.jpg" alt="makeup image" />
            </a>
          </div>
        </div>
@@ -122,7 +122,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Fotografer</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?photography' alt="photographer image" />
+             <img class="p-8 rounded-t-lg" src="img/Fotografer.jpg" alt="photographer image" />
            </a>
          </div>
        </div>
@@ -132,7 +132,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Venue</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?venue' alt="venue image" />
+             <img class="p-8 rounded-t-lg" src="img/VenueWedding.jpg" alt="venue image" />
            </a>
          </div>
        </div>
@@ -142,7 +142,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Catering</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?catering' alt="catering image" />
+             <img class="p-8 rounded-t-lg" src="img/katering.png" alt="catering image" />
            </a>
          </div>
        </div>
@@ -155,7 +155,7 @@
     <p class="text-lg text-gray-600">Tentang Kami</p>
     <h2 class="text-3xl font-semibold mb-2 mt-0">Kenapa Harus Memilih Kami?</h2>
 
-    <div class="flex flex-col lg:flex-row items-center justify-center mt-8">
+    <div class="flex flex-col lg:flex-row items-center justify-center mt-8 ml-10">
         <div class="w-full lg:w-1/2 lg:order-last lg:text-left">
             <div class="max-w-md mt-5">
                 <h2 class="text-3xl font-semibold mb-2 text-center">Vendor Pernikahan Terlengkap</h2>
@@ -180,7 +180,7 @@
                 <!-- Akhir dari tambahan ikon-ikon -->
             </div>
         </div>
-        <div class="w-1/2 lg:w-1/2 lg:order-first lg:ml-8 flex items-center justify-center">
+        <div class="w-1/2 lg:w-1/2 lg:order-first lg:ml-auto flex items-center justify-center justify-end">
             <img src="img/venue.jpg" alt="Cherish Wedding" class="w-80 h-auto rounded-tl-full rounded-tr-full shadow-lg mt-5">
         </div>
     </div>
@@ -287,31 +287,35 @@
                             </ul>
                         </div>
                         <!-- Follow us -->
-                        <div style="margin-left: 95px;">
+                        <div class="margin-left: 95px;">
                             <ul class="font-medium">
-                            <li class="mb-4 flex items-center">
-                                <div class="relative flex items-center">
-                                    <div class="absolute mt-3 mb-4 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
-                                        <i class="fas fa-map-marker-alt"></i>
+                                <li class="mb-4 flex items-center">
+                                    <div class="relative flex items-center">
+                                        <div class="absolute mt-3 mb-4 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <p class="ml-12 mb-0">Jl. Dr. Setiabudi No. 193 Bandung</p>
                                     </div>
-                                    <p class="ml-12 mb-0">Jl. Dr. Setiabudi No. 193 Bandung</p>
-                                </div>
-                            </li>
-                                <li class="mb-4">
-                                    <p>
-                                        <i class="fab fa-whatsapp"></i> <!-- Ikon WhatsApp dari Font Awesome -->
-                                        <span style="margin-left: 10px;">+62. 5555.5555.5555</span>
-                                    </p>
                                 </li>
-                                <li>
-                                    <p>
-                                        <i class="far fa-envelope"></i> <!-- Ikon Email dari Font Awesome -->
-                                        <span style="margin-left: 10px;">Cherishwedding@gmail.com</span>
-                                    </p>
+                                <li class="mb-4 flex items-center">
+                                    <div class="relative flex items-center">
+                                        <div class="absolute mt-3 mb-4 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <p class="ml-12 mb-0">+62. 5555.5555.5555</p>
+                                    </div>
+                                </li>
+                                <li class="mb-4 flex items-center">
+                                    <div class="relative flex items-center">
+                                        <div class="absolute mt-3 mb-4 w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                            <i class="far fa-envelope"></i>
+                                        </div>
+                                        <p class="ml-12 mb-0">Cherishwedding@gmail.com</p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                        <div style="margin-left: 150px;"> <!-- Atur jarak menggunakan inline style -->
+                        <div class="margin-left: 150px;"> <!-- Atur jarak menggunakan inline style -->
                             <h2 class="mb-6 text-4x1 font-normal text-gray-900 uppercase font-semibold dark:text-white">Tentang Kami</h2>
                             <h2 class="mb-6 mt-1 text-sm font-semibold text-gray-900 dark:text-white">Cherish Wedding adalah pilihan yang sempurna untuk memenuhi segala kebutuhan pernikahan Anda, menghadirkan pengalaman yang tak terlupakan dan sesuai dengan impian Anda</h2>
                         </div>
