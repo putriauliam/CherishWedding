@@ -40,7 +40,24 @@ class DatabaseSeeder extends Seeder
             'slug' => 'katering'
         ]);
 
-        Vendor::factory(10)->create();
-        city::factory(3)->create();
+        City::create([
+            'name' => ' Bandung',
+            'slug' => 'bandung'
+        ]);
+        City::create([
+            'name' => ' Jakarta',
+            'slug' => 'jakarta'
+        ]);
+        City::create([
+            'name' => ' Yogyakarta',
+            'slug' => 'yogyakarta'
+        ]);
+        City::create([
+            'name' => ' Malang',
+            'slug' => 'malang'
+        ]);
+
+        Vendor::factory(17)->create();
+        // city::factory(3)->create();
     }
 }

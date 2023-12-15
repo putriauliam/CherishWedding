@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vendor;
+use App\Models\Category;
+use App\Models\City;
 use App\Http\Requests\StorevendorRequest;
 use App\Http\Requests\UpdatevendorRequest;
 
@@ -14,10 +16,19 @@ class VendorController extends Controller
     public function index()
     {
         $title = '';
+        if(request('category')) {
+            $category = Category::firstWhere('slug', request('category'));
+            $title = ' in ' . $category->name;
+        }
+
+        if(request('city')) {
+            $city = City::firstWhere('name', request('city'));
+            $title = ' by ' . $city->name;
+        }
         return view('vendor', [
             "title" => "Vendor" . $title,
             "active" => "vendor",
-            "vendor" => Vendor::all()
+            "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->get()
         ]);
     }
 

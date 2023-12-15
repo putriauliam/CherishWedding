@@ -4,19 +4,30 @@
 {{-- <h1 class="mb-3 text-center">{{ $title }}</h1> --}}
 
 <!-- searchbar -->
+
 <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
     <div class="flex items-center justify-end p-4">
         <div class="relative text-gray-600">
-            <i class="absolute top-0 mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass" style="color: #d1d1d1;"></i>
-            <input type="search" name="search" placeholder="Cari Vendor"
-                class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none">
-        </div>
+                <form action="/vendor">
+                {{-- <i class="absolute top-0 mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass" style="color: #d1d1d1;"></i> --}}
+                <input type="search" name="search" placeholder="Cari Vendor"
+                    class="bg-white h-10 w-full pl-5 pr-5 rounded-full text-sm focus:outline-none" value="{{ request('search') }}">
+                    <button type="submit" class="absolute inset-y-0 end-0 flex items-center pe-3">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
     </div>
     <button
         class="bg-gray-500 text-white  rounded-full p-2 py-1 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
         <i class="fa-solid fa-heart"></i>
     </button>
+    
 </div>
+
+
 <!-- body -->
 <div class="container flex flex row">
     <!-- filter -->
@@ -68,15 +79,15 @@
                             <input type="checkbox" name="" id="">
                         </li>
                         <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Cimahi</h1>
+                            <h1 class="pl-5">Jakarta</h1>
                             <input type="checkbox" name="" id="">
                         </li>
                         <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Lembang</h1>
+                            <h1 class="pl-5">Yogyakarta</h1>
                             <input type="checkbox" name="" id="">
                         </li>
                         <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Rancaekek</h1>
+                            <h1 class="pl-5">Malang</h1>
                             <input type="checkbox" name="" id="">
                         </li>
                     </ul>
@@ -93,15 +104,15 @@
     <!-- card -->
     <div class="">
         <h5 class="mb-2 ml-8 text-2xl font-bold tracking-tight text-gray-900">Semua Kategori</h5>
+        @if($vendor->count())
         <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap">
             <!-- max-w-6xl -->
             <!-- SubCard -->
             @foreach($vendor as $v)
                 <div class="card w-44 bg-gray-200 mb-3 mr-2 relative block ">
-                    <div
-                        class="absolute right-2 mt-4 mr-2 w-7 h-7 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                    <button class="absolute right-2 mt-4 mr-2 w-7 h-7 flex items-center justify-center rounded-full bg-white border border-gray-200">
                         <i class="fas fa-heart text-black"></i>
-                    </div class="flex">
+                    </button class="flex">
                     @if($v->image)
                             <img src="img/{{$v->image }}"
                                 alt="{{ $v->category->name }}" class="p-3 rounded-t-lg  "  >
@@ -128,6 +139,9 @@
                 </div>
             @endforeach
         </div>
+        @else
+            <p class="text-center fs-4">No post found.</p>
+        @endif
     </div>
 
 </div>
