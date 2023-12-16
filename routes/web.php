@@ -29,8 +29,14 @@ Route::get('/tentang', function () {
         'active' => 'tentang'
     ]);
 });
+// Route::get('/detailVendor', function () {
+//     return view('detailVendor');
+// });
 Route::get('/detailVendor', function () {
-    return view('detailVendor');
+    return view('detailVendor', [
+        'title' => 'Detail Vendor',
+        'active' => 'detailVendor'
+    ]);
 });
 // Route::get('/daftar', function () {
 //     return view('daftar');
