@@ -32,12 +32,12 @@ Route::get('/tentang', function () {
 // Route::get('/detailVendor', function () {
 //     return view('detailVendor');
 // });
-Route::get('/detailVendor', function () {
-    return view('detailVendor', [
-        'title' => 'Detail Vendor',
-        'active' => 'detailVendor'
-    ]);
-});
+// Route::get('/detailVendor', function () {
+//     return view('detailVendor', [
+//         'title' => 'Detail Vendor',
+//         'active' => 'detailVendor'
+//     ]);
+// });
 // Route::get('/daftar', function () {
 //     return view('daftar');
 // });
@@ -62,4 +62,5 @@ Route::controller(GoogleController::class)->group(function(){
 
 // vendor
 Route::get('/vendor', [VendorController::class, 'index']);
+Route::get('detail/{vendor:slug}', [VendorController::class, 'show']);
 
