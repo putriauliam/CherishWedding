@@ -38,10 +38,10 @@
                             <a href="/" class="block font-medium border-b-2 border-white-900 text-white active">BERANDA</a>
                         </li>
                         <li>
-                            <a href="/vendor" class="block text-white ">VENDOR</a>
+                            <a href="/vendor" class="block text-white md:hover:font-medium">VENDOR</a>
                         </li>
                         <li>
-                            <a href="/tentang" class="block text-white">TENTANG KAMI</a>
+                            <a href="/tentang" class="block text-white md:hover:font-medium">TENTANG KAMI</a>
                         </li>
                         @Auth
                     <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"

@@ -17,13 +17,13 @@
             <ul
                 class="font-small flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="/" class="block ">BERANDA</a>
+                    <a href="/" class="block block  py-2 px-3 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-900 md:hover:font-medium md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-900">BERANDA</a>
                 </li>
                 <li>
-                    <a href="/vendor" class="block font-medium border-b-2 border-gray-900  {{ $active === 'vendor' ? 'active' : '' }}">VENDOR</a>
+                    <a href="/vendor" class="block  py-2 px-3 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-900 md:hover:font-medium md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-900  {{ $active === 'vendor' ? 'md:text-gray-700 font-medium border-b-2 border-gray-900' : '' }}">VENDOR</a>
                 </li>
                 <li>
-                    <a href="/tentang" class="block ">TENTANG KAMI</a>
+                    <a href="/tentang" class="block py-2 px-3 text-gray-900  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 md:dark:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 {{ $active === 'tentang' ? 'md:text-gray-700 font-medium border-b-2 border-gray-900' : '' }}"  >TENTANG KAMI</a>
                 </li>
                 <!-- font-medium border-b-2 border-gray-900 -->
                 @Auth
