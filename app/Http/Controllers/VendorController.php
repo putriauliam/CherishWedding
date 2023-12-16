@@ -64,7 +64,11 @@ class VendorController extends Controller
      */
     public function show(vendor $vendor)
     {
-        //
+        return view('detailVendor', [
+            "title" => "Detail",
+            "active" => "vendor",
+            "vendor" => $vendor
+        ]);
     }
 
     /**

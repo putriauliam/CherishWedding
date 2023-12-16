@@ -5,7 +5,7 @@
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-2">
                     <a href="#" class="flex items-center">
-                        <img src="img/logo.png" class="h-8 me-3" alt="FlowBite Logo" />
+                        <img src="{{ asset('storage/image/logo.png') }}" class="h-8 me-3" alt="FlowBite Logo" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Cherish
                             Wedding</span>
                     </a>
