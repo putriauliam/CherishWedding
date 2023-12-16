@@ -7,29 +7,34 @@ use App\Models\Category;
 use App\Models\City;
 use App\Http\Requests\StorevendorRequest;
 use App\Http\Requests\UpdatevendorRequest;
+use Illuminate\Http\Request;
 
 class VendorController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        
         $title = '';
-        if(request('category')) {
-            $category = Category::firstWhere('slug', request('category'));
-            $title = ' in ' . $category->name;
-        }
+        // if(request('category')) {
+        //     $category = Category::firstWhere('slug', request('category'));
+        //     $title = ' in ' . $category->name;
+        // }
 
-        if(request('city')) {
-            $city = City::firstWhere('name', request('city'));
-            $title = ' by ' . $city->name;
-        }
+        // if(request('city')) {
+        //     $city = City::firstWhere('name', request('city'));
+        //     $title = ' by ' . $city->name;
+        // }
         return view('vendor', [
             "title" => "Vendor" . $title,
             "active" => "vendor",
-            "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->get()
+            "categories" => Category::all(),
+            "cities" => City::all(),
+            "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)
         ]);
+
     }
 
     public function rekomendasi()

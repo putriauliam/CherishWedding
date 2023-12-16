@@ -41,8 +41,8 @@
             </div>
             <!-- garis -->
             <hr class="font-medium border-b-2 border-gray-900 my-5">
+            <form action="/vendor" method="GET">
             <div class="flex flex-col">
-
                 <!-- filter check -->
                 <div>
                     <ul>
@@ -50,53 +50,34 @@
                             <h1>Kategori</h1>
                         </li>
                     </ul>
+                    @foreach($categories as $category)
                     <ul>
                         <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Fotografer</h1>
-                            <input type="checkbox" name="" id="">
-                        </li>
-                        <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Mua</h1>
-                            <input type="checkbox" name="" id="">
-                        </li>
-                        <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Katering</h1>
-                            <input type="checkbox" name="" id="">
-                        </li>
-                        <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Venue</h1>
-                            <input type="checkbox" name="" id="">
+                            <h1 class="pl-5">{{ $category->name }}</h1>
+                            <input type="checkbox" name="category[]" id="" value="{{ $category->id }}"  >
                         </li>
                     </ul>
+                    @endforeach
                     <ul>
                         <li>
                             <h1>Kota</h1>
                         </li>
                     </ul>
+                    @foreach($cities as $city)
                     <ul>
                         <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Bandung</h1>
-                            <input type="checkbox" name="" id="">
+                            <h1 class="pl-5">{{ $city->name }}</h1>
+                            <input type="checkbox" name="city[]" id="" value="{{ $city->id }}" >
                         </li>
-                        <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Jakarta</h1>
-                            <input type="checkbox" name="" id="">
-                        </li>
-                        <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Yogyakarta</h1>
-                            <input type="checkbox" name="" id="">
-                        </li>
-                        <li class="flex flex-row items-center justify-between">
-                            <h1 class="pl-5">Malang</h1>
-                            <input type="checkbox" name="" id="">
-                        </li>
+                        
                     </ul>
+                    @endforeach
                 </div>
                 <!-- button -->
-                <button type="button"
+                <button type="submit"
                     class="mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">TERAPKAN</button>
-
             </div>
+        </form>
         </div>
     </div>
     <!-- card -->
@@ -143,7 +124,11 @@
             <p class="text-center fs-4">No post found.</p>
         @endif
     </div>
+</div>
 
+{{-- pagination --}}
+<div class="text-center">
+    {{ $vendor->links() }}
 </div>
 
 </div>
