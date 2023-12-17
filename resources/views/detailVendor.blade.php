@@ -41,7 +41,7 @@
                     class="img-fluid  h-3/4 w-2xl rounded-lg mt-4 max-h-350 overflow-hidden">
             </div>
         @else
-            <img src="https://source.unsplash.com/1200x400?{{ $vendor->category->name }}"
+            <img src="https://source.unsplash.com/1200x1000?{{ $vendor->category->name }}"
                 alt="{{ $vendor->category->name }}" class="img-fluid mt-3">
         @endif
 
