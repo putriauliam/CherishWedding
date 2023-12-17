@@ -6,6 +6,7 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,11 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('beranda', [
+        'categories' => Category::all()
+    ]);
 });
-// Route::get('/vendor', function () {
-//     return view('vendor');
-// });
+
 Route::get('/tentang', function () {
     return view('tentang', [
         'title' => 'Tentang Kami',
@@ -46,6 +47,7 @@ Route::get('/tentang', function () {
 //     return view('masuk');
 // });
 
+
 // LOGIN
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -66,5 +68,5 @@ Route::get('/vendor', [VendorController::class, 'index']);
 Route::get('detail/{vendor:slug}', [VendorController::class, 'show']);
 
 // favorite
-Route::post('/favorites/add', [FavoriteController::class, 'store']);
+Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware('auth');
 

@@ -42,7 +42,7 @@ class FavoriteController extends Controller
                 'vendor_id' => $request->vendor_id,
             ]);
 
-            return redirect('/vendor')->with('success', 'Ditambahkan ke daftar favorit');
+            return back()->with('success', 'Ditambahkan ke daftar favorit');
         }
     }
 
