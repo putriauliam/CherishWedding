@@ -66,6 +66,7 @@ Route::controller(GoogleController::class)->group(function(){
 // vendor
 Route::get('/vendor', [VendorController::class, 'index']);
 Route::get('detail/{vendor:slug}', [VendorController::class, 'show']);
+Route::get('/', [VendorController::class, 'rekomendasi']);
 
 // favorite
 Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware('auth');
