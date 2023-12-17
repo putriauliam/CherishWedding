@@ -33,14 +33,9 @@
                 <img class="h-auto max-w-full rounded-lg" src="{{ asset('storage/image/putri.png') }}" alt="">
                 <h5 class="text-xl font-medium text-gray-900 dark:text-white">Lita Yusdia Fatimah</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-
             </div>
         </div>
-
-          
-
-        
-</div>
     </div>
+</div>
     
 @endsection
