@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -63,4 +64,7 @@ Route::controller(GoogleController::class)->group(function(){
 // vendor
 Route::get('/vendor', [VendorController::class, 'index']);
 Route::get('detail/{vendor:slug}', [VendorController::class, 'show']);
+
+// favorite
+Route::post('/favorites/add', [FavoriteController::class, 'store']);
 
