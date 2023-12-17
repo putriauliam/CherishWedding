@@ -7,18 +7,18 @@
     @vite('resources/css/app.css','resources/js/app.js')
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/6b738b2603.js" crossorigin="anonymous"></script>
-        <link rel="icon" href="img/logo.png">
+        <link rel="icon" href="{{ asset('storage/image/logo.png') }}">
         <title>BERANDA</title>
 </head>
 
 <body>
 
  <!-- navbar -->
-    <section class="bg-center bg-no-repeat bg-blend-multiply" style="background-image: url('/img/wedding1.jpg');">
+    <section class="bg-center bg-no-repeat bg-blend-multiply" style="background-image: url('{{ asset('storage/image/wedding1.jpg') }}');">
         <nav class="bg-opacity-50 border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="img/logo.png" class="h-10" alt="Flowbite Logo" />
+                    <img src="{{ asset('storage/image/logo.png') }}" class="h-10" alt="Flowbite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Cherish Wedding</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
@@ -110,7 +110,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">MUA</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src="img/MUA.jpg" alt="makeup image" />
+             <img class="p-8 rounded-t-lg" src="{{ asset('storage/image/MUA.jpg') }}" alt="makeup image" />
            </a>
          </div>
        </div>
@@ -120,7 +120,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Fotografer</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src="img/Fotografer.png" alt="photographer image" />
+             <img class="p-8 rounded-t-lg" src="{{ asset('storage/image/Fotografer.png') }}" alt="photographer image" />
            </a>
          </div>
        </div>
@@ -130,7 +130,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Venue</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src="img/Venue.png" alt="venue image" />
+             <img class="p-8 rounded-t-lg" src="{{ asset('storage/image/Venue.png') }}" alt="venue image" />
            </a>
          </div>
        </div>
@@ -140,7 +140,7 @@
              <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Catering</h5>
            </a>
            <a href="#">
-             <img class="p-8 rounded-t-lg" src="img/Katering.png" alt="catering image" />
+             <img class="p-8 rounded-t-lg" src="{{ asset('storage/image/Katering.png') }}" alt="catering image" />
            </a>
          </div>
        </div>
@@ -163,15 +163,15 @@
                 <!-- Tambahkan ikon-ikon di sini -->
                 <div class="flex mt-20 items-center justify-center"> 
                   <div class="mr-4 flex flex-col items-center">
-                      <img src="img/fast-time.png" alt="Icon Cepat" class="w-20 h-20 mr-4" />
+                      <img src="{{ asset('storage/image/fast-time.png') }}" alt="Icon Cepat" class="w-20 h-20 mr-4" />
                       <span class="text-xl font-semibold mb-1 mt-4">CEPAT</span>
                   </div>
                   <div class="mr-4 flex flex-col items-center">
-                      <img src="img/achievement.png" alt="Icon" class="w-20 h-20 mr-4">
+                      <img src="{{ asset('storage/image/achievement.png') }}" alt="Icon" class="w-20 h-20 mr-4">
                       <span class="text-xl font-semibold mb-1 mt-4">TERPERCAYA</span>
                   </div>
                   <div class="flex flex-col items-center">
-                      <img src="img/magic-box.png" alt="Icon Box" class="w-20 h-20 mr-4">
+                      <img src="{{ asset('storage/image/magic-box.png') }}" alt="Icon Box" class="w-20 h-20 mr-4">
                       <span class="text-xl font-semibold mb-1 mt-4">LENGKAP</span>
                   </div>
               </div>
@@ -179,7 +179,7 @@
             </div>
         </div>
         <div class="w-1/2 lg:w-1/2 lg:order-first   items-center ml-[200px]">
-            <img src="img/venue.jpg" alt="Cherish Wedding" class="w-80 h-auto rounded-tl-full rounded-tr-full shadow-lg mt-5">
+            <img src="{{ asset('storage/image/venue.jpg') }}" alt="Cherish Wedding" class="w-80 h-auto rounded-tl-full rounded-tr-full shadow-lg mt-5">
         </div>
     </div>
 </section>
@@ -286,7 +286,7 @@
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-2">
                     <a href="#" class="flex items-center">
-                        <img src="img/logo.png" class="h-8 me-3" alt="FlowBite Logo" />
+                        <img src="{{ asset('storage/image/logo.png') }}" class="h-8 me-3" alt="FlowBite Logo" />
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Cherish
                             Wedding</span>
                     </a>

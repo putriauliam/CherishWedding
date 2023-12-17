@@ -27,7 +27,7 @@ class VendorFactory extends Factory
             'price' => $this->faker->numberBetween(150000, 10000000),
             'city_id' => mt_rand(1,4),
             'category_id' => mt_rand(1,4),
-            'image' => "venue.jpg",
+            'image' => "banner.jpg",
             'profil' => "putri.png",
             'telp' => $this->faker->phoneNumber(),
             'email' => $this->faker->email(),
