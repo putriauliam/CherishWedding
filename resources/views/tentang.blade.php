@@ -6,7 +6,7 @@
         <p> Dorongan kami dalam menciptakan Cherish Wedding berasal dari keinginan untuk membantu pasangan merencanakan pernikahan mereka dengan lebih lancar, kreatif, dan tanpa tekanan. Dari sinilah lahir sebuah platform yang menghubungkan pasangan dengan vendor-vendor terbaik, sambil tetap mempertahankan fokus pada keindahan, kreativitas, dan kepuasan pelanggan.</p>
     </div>
 
-    <div class="relative xl:w-1/2 xl:absolute top-32 right-0">
+    <div class="relative xl:w-1/2 xl:absolute top-16 right-0">
         <img src="{{ asset('storage/image/team.png') }}" class="max-w-full h-auto">
     </div>   
     
@@ -35,22 +35,11 @@
                 <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
 
             </div>
-        </div>
+    </div>
 
           
 
         
 </div>
     </div>
-    
-
-
-
- 
-    
-
-
-<script src="https://cdn.tailwindcss.com"></script>
-   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 @endsection
