@@ -213,102 +213,64 @@
         <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center">
             <!-- Kartu 1 -->
-            <div
-                class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
-                <!-- Konten Kartu 1 -->
-                <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
+            @foreach($rekomendasi as $rekomen)
                 <div
                     class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
-                    <!-- Konten Kartu -->
-                    <a href="#" class="relative block">
-                        <img class="p-4 sm:p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup'
-                            alt="makeup image" />
-                        <div
-                            class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
-                            <i class="fas fa-heart text-black"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="flex items-center p-4 sm:p-5">
-                        <div class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
-                            <img class="w-12 h-12 sm:w-20 sm:h-20" src="img/putri.png" alt="PUTRI">
-                        </div>
-                        <div class="ml-3 sm:ml-4">
-                            <p class="text-lg font-medium font-thin dark:text-white">
-                                PUTRI AULIA MAULIDINA
-                            </p>
-                        </div>
-                    </a>
-                    <div class="mt-2 mb-4">
-                        <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">VENUE</p>
-                        <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">BANDUNG</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Kartu 2 -->
-            <div
-                class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
-                <!-- Konten Kartu 2 -->
-                <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
-                <div
-                    class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
-                    <!-- Konten Kartu -->
-                    <a href="#" class="relative block">
-                        <img class="p-4 sm:p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup'
-                            alt="makeup image" />
-                        <div
-                            class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
-                            <i class="fas fa-heart text-black"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="flex items-center p-4 sm:p-5">
-                        <div class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
-                            <img class="w-12 h-12 sm:w-20 sm:h-20" src="img/putri.png" alt="PUTRI">
-                        </div>
-                        <div class="ml-3 sm:ml-4">
-                            <p class="text-lg font-medium font-thin dark:text-white">
-                                PUTRI AULIA MAULIDINA
-                            </p>
-                        </div>
-                    </a>
-                    <div class="mt-2 mb-4">
-                        <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">VENUE</p>
-                        <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">BANDUNG</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Kartu 3 -->
-            <div
-                class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
-                <!-- Konten Kartu 3 -->
-                <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
-                <div
-                    class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
-                    <!-- Konten Kartu -->
-                    <a href="#" class="relative block">
-                        <img class="p-4 sm:p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup'
-                            alt="makeup image" />
-                        <div
-                            class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
-                            <i class="fas fa-heart text-black"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="flex items-center p-4 sm:p-5">
-                        <div class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
-                            <img class="w-12 h-12 sm:w-20 sm:h-20" src="img/putri.png" alt="PUTRI">
-                        </div>
-                        <div class="ml-3 sm:ml-4">
-                            <p class="text-lg font-medium font-thin dark:text-white">
-                                PUTRI AULIA MAULIDINA
-                            </p>
-                        </div>
-                    </a>
-                    <div class="mt-2 mb-4">
-                        <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">VENUE</p>
-                        <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">BANDUNG</p>
-                    </div>
-                </div>
+                    <!-- Konten Kartu 1 -->
+                    <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
+                    <div
+                        class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+                        <!-- Konten Kartu -->
 
-            </div>
+                        <a href="/detail/{{ $rekomen->slug }}">
+                            @if($rekomen->image)
+                                <img src="{{ asset('storage/image/' . $rekomen->image) }}"
+                                    alt="{{ $rekomen->category->name }}" class="p-4 sm:p-8 rounded-t-lg">
+                            @else
+                                <img class="p-4 sm:p-8 rounded-t-lg"
+                                    src='https://source.unsplash.com/500x500/?{{ $rekomen->category->name }}'
+                                    alt="makeup image" />
+                            @endif
+                        </a>
+                        <form action="/favorites/add" method="POST">
+                            @csrf
+                            <input type="hidden" name="vendor_id" id="favorit" value="{{ $rekomen->id }}">
+                            <button type="submit"
+                                class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                <i class="fas fa-heart text-black"></i>
+                            </button class="flex">
+                        </form>
+                        <a href="/detail/{{ $rekomen->slug }}" class="flex items-center p-4 sm:p-5">
+
+                            @if($rekomen->profil)
+                                <div style="overflow: hidden;"
+                                    class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
+                                    <img src="{{ asset('storage/image/' . $rekomen->profil) }}"
+                                        alt="{{ $rekomen->profil }}" class="w-12 h-12 sm:w-20 sm:h-20">
+                                </div>
+                            @else
+                                <div class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
+                                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                                        alt="{{ $rekomen->category->name }}" class="w-12 h-12 sm:w-20 sm:h-20">
+                                </div>
+                            @endif
+                            <div class="ml-3 sm:ml-4">
+                                <p class="text-lg font-medium font-thin dark:text-white">
+                                    <strong>
+                                        {{ $rekomen->name }}
+                                    </strong>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="mt-2 mb-4">
+                            <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">
+                                {{ $rekomen->category->name }}</p>
+                            <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">
+                                {{ $rekomen->city->name }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </section>
 

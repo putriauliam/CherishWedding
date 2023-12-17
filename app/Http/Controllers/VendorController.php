@@ -40,7 +40,9 @@ class VendorController extends Controller
 
     public function rekomendasi()
     {
-        //
+        return view('beranda', [
+            "rekomendasi" => Vendor::inRandomOrder()->get()->take(3)
+        ]);
     }
 
 
