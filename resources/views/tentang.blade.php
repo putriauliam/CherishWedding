@@ -7,7 +7,7 @@
         <p> Dorongan kami dalam menciptakan Cherish Wedding berasal dari keinginan untuk membantu pasangan merencanakan pernikahan mereka dengan lebih lancar, kreatif, dan tanpa tekanan. Dari sinilah lahir sebuah platform yang menghubungkan pasangan dengan vendor-vendor terbaik, sambil tetap mempertahankan fokus pada keindahan, kreativitas, dan kepuasan pelanggan.</p>
     </div>
 
-    <div class="relative xl:w-1/2 xl:absolute top-16 right-0">
+    <div class="xl:w-1/2 xl:absolute top-16 right-0">
         <img src="{{ asset('storage/image/team.png') }}" class="max-w-full h-auto">
     </div>   
 </div>
@@ -39,6 +39,4 @@
         </div>
     </div>
 </div>
-    
-
 @endsection
