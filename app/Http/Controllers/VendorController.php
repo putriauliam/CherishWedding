@@ -17,18 +17,19 @@ class VendorController extends Controller
     public function index()
     {
         
-        $title = '';
-        // if(request('category')) {
-        //     $category = Category::firstWhere('slug', request('category'));
-        //     $title = ' in ' . $category->name;
-        // }
+        $bigtitle = '';
+        if(request('category')) {
+            $category = Category::firstWhere('id', request('category'));
+            $bigtitle = ' - Kategori ' . $category->name;
+        }
 
         // if(request('city')) {
         //     $city = City::firstWhere('name', request('city'));
         //     $title = ' by ' . $city->name;
         // }
         return view('vendor', [
-            "title" => "Vendor" . $title,
+            "title" => "Vendor",
+            "bigtitle" => "Semua Vendor" . $bigtitle,
             "active" => "vendor",
             "categories" => Category::all(),
             "cities" => City::all(),

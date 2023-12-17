@@ -75,7 +75,7 @@
 <!-- body -->
 <div class="container flex flex row">
     <!-- filter -->
-    <div class="filter ml-5">
+    <div class="filter ml-5 mr-5">
         <div
             class="w-72 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <div class="flex items-center justify-between">
@@ -86,12 +86,12 @@
             <!-- garis -->
             <hr class="font-medium border-b-2 border-gray-900 my-5">
             <form action="/vendor" method="GET">
-                <div class="flex flex-col">
+                <div class="flex flex-col ">
                     <!-- filter check -->
                     <div>
                         <ul>
                             <li>
-                                <h1>Kategori</h1>
+                                <h1 class=""><strong>Kategori</strong></h1>
                             </li>
                         </ul>
                         @foreach($categories as $category)
@@ -104,7 +104,7 @@
                         @endforeach
                         <ul>
                             <li>
-                                <h1>Kota</h1>
+                                <h1><strong>Kota</strong></h1>
                             </li>
                         </ul>
                         @foreach($cities as $city)
@@ -128,7 +128,7 @@
 
     <!-- card -->
     <div class="">
-        <h5 class="mb-2 ml-8 text-2xl font-bold tracking-tight text-gray-900">Semua Kategori</h5>
+        <h5 class="mb-2 ml-4 text-2xl font-bold tracking-tight text-gray-900">{{ $bigtitle }}</h5>
 
         @if($vendor->count())
             <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap">
@@ -161,14 +161,14 @@
                             @if($v->profil)
                                 <div style="overflow: hidden;">
                                     <img src="{{ asset('storage/image/' . $v->profil) }}"
-                                        alt="{{ $v->profil }}" class="ml-3 w-8 h-8 rounded-full justify-between">
+                                        alt="{{ $v->profil }}" class="ml-3 mr-2 w-8 h-8 rounded-full justify-between">
                                 </div>
                             @else
                                 <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
                                     alt="{{ $v->category->name }}"
-                                    class="ml-3 w-8 h-8 rounded-full justify-between">
+                                    class="ml-3 mr-2 w-8 h-8 rounded-full justify-between">
                             @endif
-                            <p class="pl-2 text-sm font-thin">
+                            <p class="ml-1 text-sm font-thin">
                                 <strong class="font-semibold text-gray-900 dark:text-white">{{ $v->name }}</strong>
                             </p>
                         </div>
