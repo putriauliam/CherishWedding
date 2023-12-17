@@ -7,7 +7,7 @@
   @vite('resources/css/app.css','resources/js/app.js')
   @vite(['resources/css/app.css','resources/js/app.js'])
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"  rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <script src="https://kit.fontawesome.com/6b738b2603.js" crossorigin="anonymous"></script>
   <link rel="icon" href="img/logo.png">
 </head>
