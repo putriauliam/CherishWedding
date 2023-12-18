@@ -105,6 +105,7 @@
             </div>
         </div>
     </section>
+
     <section class="text-center bg-white py-10">
         <h2 class="text-3xl font-semibold underline mb-20 mt-0">KATEGORI</h2>
         <div class="flex justify-center">
@@ -132,6 +133,7 @@
                                 src="{{ asset('storage/image/Fotografer.png') }}"
                                 alt="photographer image" />
                         </a>
+
                     </div>
                 </div>
                 <div class="bg-white col-span-1 row-span-1">
@@ -183,6 +185,7 @@
                             <img src="{{ asset('storage/image/fast-time.png') }}" alt="Icon Cepat"
                                 class="w-20 h-20 mr-4" />
                             <span class="text-xl font-semibold mb-1 mt-4">CEPAT</span>
+
                         </div>
                         <div class="mr-4 flex flex-col items-center">
                             <img src="{{ asset('storage/image/achievement.png') }}" alt="Icon"
@@ -208,7 +211,6 @@
 
 
     <section class="text-center bg-white py-10 mt-4 ">
-        <p class="text-lg text-gray-600">Kategori</p>
         <h2 class="text-3xl font-semibold underline mb-20 mt-0">MAKE UP ARTIST</h2>
         <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center">
@@ -236,7 +238,7 @@
                             @csrf
                             <input type="hidden" name="vendor_id" id="favorit" value="{{ $rekomen->id }}">
                             <button type="submit"
-                                class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                class="absolute top-9 right-9 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fas fa-heart text-black"></i>
                             </button class="flex">
                         </form>

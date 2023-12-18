@@ -71,3 +71,7 @@ Route::get('/', [VendorController::class, 'rekomendasi']);
 // favorite
 Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware('auth');
 
+//dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
