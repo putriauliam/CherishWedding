@@ -101,7 +101,7 @@
     </section>
   
  <section class="text-center bg-white py-10"> 
-     <h2 class="text-3xl font-semibold underline mb-20 mt-0">KATEGORI</h2>
+     <h2 class="text-3xl font-semibold mb-20 mt-0">Kategori</h2>
      <div class="flex justify-center">
      <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 max-w-3xl">
        <div class="bg-white col-span-1 row-span-1">
@@ -187,8 +187,7 @@
 
 
 <section class="text-center bg-white py-10 mt-4 ">
-    <p class="text-lg text-gray-600">Kategori</p>
-    <h2 class="text-3xl font-semibold underline mb-20 mt-0">MAKE UP ARTIST</h2>
+    <h2 class="text-3xl font-semibold mb-20 mt-0">Rekomendasi Untuk Anda</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center">
         <!-- Kartu 1 -->
         <div class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
@@ -198,7 +197,7 @@
                 <!-- Konten Kartu -->
                 <a href="#" class="relative block">
                     <img class="p-4 sm:p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup' alt="makeup image" />
-                    <div class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                    <div class="absolute top-9 right-9 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                         <i class="fas fa-heart text-black"></i>
                     </div>
                 </a>
@@ -226,7 +225,7 @@
                     <!-- Konten Kartu -->
                     <a href="#" class="relative block">
                         <img class="p-4 sm:p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup' alt="makeup image" />
-                        <div class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                        <div class="absolute top-9 right-9 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                             <i class="fas fa-heart text-black"></i>
                         </div>
                     </a>
@@ -254,7 +253,7 @@
                 <!-- Konten Kartu -->
                 <a href="#" class="relative block">
                     <img class="p-4 sm:p-8 rounded-t-lg" src='https://source.unsplash.com/500x500/?makeup' alt="makeup image" />
-                    <div class="absolute top-4 right-4 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                    <div class="absolute top-9 right-9 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                         <i class="fas fa-heart text-black"></i>
                     </div>
                 </a>

@@ -63,3 +63,7 @@ Route::controller(GoogleController::class)->group(function(){
 // vendor
 Route::get('/vendor', [VendorController::class, 'index']);
 
+//dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+});
