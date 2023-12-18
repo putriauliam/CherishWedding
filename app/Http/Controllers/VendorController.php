@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Http\Requests\StorevendorRequest;
 use App\Http\Requests\UpdatevendorRequest;
+use Illuminate\Http\Request;
 
 class VendorController extends Controller
 {
@@ -15,26 +16,33 @@ class VendorController extends Controller
      */
     public function index()
     {
-        $title = '';
+        
+        $bigtitle = '';
         if(request('category')) {
-            $category = Category::firstWhere('slug', request('category'));
-            $title = ' in ' . $category->name;
+            $category = Category::firstWhere('id', request('category'));
+            $bigtitle = ' - Kategori ' . $category->name;
         }
 
-        if(request('city')) {
-            $city = City::firstWhere('name', request('city'));
-            $title = ' by ' . $city->name;
-        }
+        // if(request('city')) {
+        //     $city = City::firstWhere('name', request('city'));
+        //     $title = ' by ' . $city->name;
+        // }
         return view('vendor', [
-            "title" => "Vendor" . $title,
+            "title" => "Vendor",
+            "bigtitle" => "Semua Vendor" . $bigtitle,
             "active" => "vendor",
-            "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->get()
+            "categories" => Category::all(),
+            "cities" => City::all(),
+            "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)
         ]);
+
     }
 
     public function rekomendasi()
     {
-        //
+        return view('beranda', [
+            "rekomendasi" => Vendor::inRandomOrder()->get()->take(3)
+        ]);
     }
 
 
@@ -59,7 +67,11 @@ class VendorController extends Controller
      */
     public function show(vendor $vendor)
     {
-        //
+        return view('detailVendor', [
+            "title" => "Detail",
+            "active" => "vendor",
+            "vendor" => $vendor
+        ]);
     }
 
     /**

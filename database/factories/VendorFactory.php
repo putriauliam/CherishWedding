@@ -17,7 +17,7 @@ class VendorFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(mt_rand(2,3)),
+            'name' => $this->faker->sentence(mt_rand(1,2)),
             'slug' => $this->faker->slug(),
             'address' => $this->faker->address(),
             'koordinat_maps' => $this->faker->latitude().",".$this->faker->longitude(),
@@ -25,9 +25,13 @@ class VendorFactory extends Factory
                         ->map(fn($p) => "<p>$p</p>")
                         ->implode(''),
             'price' => $this->faker->numberBetween(150000, 10000000),
-            'city_id' => mt_rand(1,3),
-            'category_id' => mt_rand(1,3),
-            'image' => "venue.jpg"
+            'city_id' => mt_rand(1,4),
+            'category_id' => mt_rand(1,4),
+            'image' => "banner.jpg",
+            'profil' => "putri.png",
+            'telp' => $this->faker->phoneNumber(),
+            'email' => $this->faker->email(),
+            'instagram' => $this->faker->sentence(1),
         ];
     }
 }

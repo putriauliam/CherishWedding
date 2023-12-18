@@ -26,28 +26,36 @@ class Vendor extends Model
                     });
             });
         });
-        
 
-        // $query->when($filters['search'] ?? false, function ($query, $search) {
-        //     return $query->whereHas('category', function ($query) use ($search) {
-        //         $query->where('name', $search);
-        //     });
-        // });
-
-
-
-        $query->when($filters['category'] ?? false, function ($query, $category) {
-            return $query->whereHas('category', function ($query) use ($category) {
-                $query->where('name', $category);
+        $query->when($filters['city'] ?? false, function ($query, $city) {
+            return $query->whereHas('city', function ($query) use ($city) {
+                $query->whereIn('id', $city);
+                
             });
         });
 
-        $query->when(
-            $filters['city'] ?? false,
-            fn ($query, $author) => $query->whereHas(  'author',fn ($query) =>
-                $query->where('name', $author)
-            )
-        );
+        $query->when($filters['category'] ?? false, function ($query, $category) {
+            return $query->whereHas('category', function ($query) use ($category) {
+                $query->whereIn('id', $category);
+            })
+            ->orwhereHas('category', function ($query) use ($category) {
+                $query->where('name', $category);
+            });
+        });
+        
+
+        // $query->when($filters['category'] ?? false, function ($query, $category) {
+        //     return $query->whereHas('category', function ($query) use ($category) {
+        //         $query->where('name', $category);
+        //     });
+        // });
+
+        // $query->when(
+        //     $filters['city'] ?? false,
+        //     fn ($query, $author) => $query->whereHas(  'author',fn ($query) =>
+        //         $query->where('name', $author)
+        //     )
+        // );
     }
 
     public function category()

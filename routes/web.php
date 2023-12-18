@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +20,11 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('beranda', [
+        'categories' => Category::all()
+    ]);
 });
-// Route::get('/vendor', function () {
-//     return view('vendor');
-// });
+
 Route::get('/tentang', function () {
     return view('tentang', [
         'title' => 'Tentang Kami',
@@ -32,18 +34,19 @@ Route::get('/tentang', function () {
 // Route::get('/detailVendor', function () {
 //     return view('detailVendor');
 // });
-Route::get('/detailVendor', function () {
-    return view('detailVendor', [
-        'title' => 'Detail Vendor',
-        'active' => 'detailVendor'
-    ]);
-});
+// Route::get('/detailVendor', function () {
+//     return view('detailVendor', [
+//         'title' => 'Detail Vendor',
+//         'active' => 'detailVendor'
+//     ]);
+// });
 // Route::get('/daftar', function () {
 //     return view('daftar');
 // });
 // Route::get('/masuk', function () {
 //     return view('masuk');
 // });
+
 
 // LOGIN
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -62,6 +65,11 @@ Route::controller(GoogleController::class)->group(function(){
 
 // vendor
 Route::get('/vendor', [VendorController::class, 'index']);
+Route::get('detail/{vendor:slug}', [VendorController::class, 'show']);
+Route::get('/', [VendorController::class, 'rekomendasi']);
+
+// favorite
+Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware('auth');
 
 //dashboard
 Route::get('/dashboard', function () {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Favorite;
 use App\Http\Requests\StoreFavoriteRequest;
 use App\Http\Requests\UpdateFavoriteRequest;
+use Illuminate\Http\Request;
 
 class FavoriteController extends Controller
 {
@@ -27,9 +28,22 @@ class FavoriteController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreFavoriteRequest $request)
+    public function store(Request $request)
     {
-        //
+        $user = auth()->user()->id;
+        $exist = Favorite::where('user_id', $user)->where('vendor_id', $request->vendor_id)->first();
+
+        
+        if ($exist) {
+            return back()->with('fail', 'Vendor sudah ada dalam daftar favorit');
+        } else {
+            Favorite::create([
+                'user_id' => $user,
+                'vendor_id' => $request->vendor_id,
+            ]);
+
+            return back()->with('success', 'Ditambahkan ke daftar favorit');
+        }
     }
 
     /**

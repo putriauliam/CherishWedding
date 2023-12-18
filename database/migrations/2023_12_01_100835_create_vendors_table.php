@@ -21,7 +21,11 @@ return new class extends Migration
             $table->string('address');
             $table->string('koordinat_maps');
             $table->text('detail');
+            $table->string('telp');
+            $table->string('email')->nullable();
+            $table->string('instagram')->nullable();
             $table->string('image')->nullable();
+            $table->string('profil')->nullable();
             $table->timestamps();
         });
     }
