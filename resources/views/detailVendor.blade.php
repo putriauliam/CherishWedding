@@ -81,7 +81,7 @@
             <img src="https://source.unsplash.com/1200x1000?{{ $vendor->category->name }}"
                 alt="{{ $vendor->category->name }}" class="img-fluid mt-3">
         @endif
-
+        <div id="map" style="height: 380px" class="h-auto max-w-full"></div>
     </div>
     <!-- contactInfo -->
     <div class="detailContact m-5">
@@ -135,6 +135,27 @@
             </div>
         </div>
     </div>
+    
 </div>
+<script>
+    
+    var slug = '{{ $vendor->slug }}';
+    console.log(slug);
+
+    $.ajax({
+                type: 'GET',
+                url: '/maps/'+ slug,
+                // data: {id:id},
+                success: function (data){
+                    console.log(data);
+                    var map = L.map('map').setView(JSON.parse("["+data+"]"), 16);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+                    var marker = L.marker(JSON.parse("["+data+"]")).addTo(map);
+                },
+                error: function(){
+                    alert('There was an error loading the data.');
+                }
+    });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 @endsection

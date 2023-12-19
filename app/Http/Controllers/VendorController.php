@@ -45,6 +45,20 @@ class VendorController extends Controller
         ]);
     }
 
+    public function maps($slug)
+    {
+        // $maps = Vendor::select('koordinat_maps')->where('slug', $slug)->first();
+        //     return response()->json( $maps);
+        $maps = Vendor::where('slug', $slug)->first();
+
+        if ($maps) {
+            $coordinates = $maps->select('koordinat_maps')->first()->koordinat_maps;
+            return response()->json( $coordinates);
+        } else {
+            return response()->json(['error' => 'Vendor not found'], 404);
+        }
+        
+    }
 
     /**
      * Show the form for creating a new resource.
