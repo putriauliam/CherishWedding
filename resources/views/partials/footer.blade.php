@@ -49,9 +49,9 @@
         </div>
         <!-- Navbar -->
         <div class="text-center">
-            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Beranda</h2>
-            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Vendor</h2>
-            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Tentang Kami</h2>
+            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/">Beranda</a></h2>
+            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/vendor">Vendor</a></h2>
+            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/tentang">Tentang Kami</a></h2>
         </div>
     </div>
 </div>
