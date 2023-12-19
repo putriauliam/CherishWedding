@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 Route::get('/tentang', function () {
     return view('tentang', [
-        'title' => 'Tentang Kami',
+        'title' => 'tentang kami',
         'active' => 'tentang'
     ]);
 });
@@ -74,4 +74,12 @@ Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware(
 //dashboard
 Route::get('/dashboard', function () {
     return view('dashboard.index');
+});
+
+// profil user
+Route::get('/profil', function () {
+    return view('profil', [
+        'title' => 'profil user',
+        'active' => 'profil'
+    ]);
 });
