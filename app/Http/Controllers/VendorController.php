@@ -47,15 +47,25 @@ class VendorController extends Controller
 
     public function maps($slug)
     {
-        // $maps = Vendor::select('koordinat_maps')->where('slug', $slug)->first();
-        //     return response()->json( $maps);
-        $maps = Vendor::where('slug', $slug)->first();
+        // $maps = Vendor::select('koordinat_maps')->where('slug', $slug)->get()->koordinat_maps;
+        // $coordinates = $maps->select('koordinat_maps')->get()->koordinat_maps;
+        //     return response()->json( $coordinates);
 
-        if ($maps) {
-            $coordinates = $maps->select('koordinat_maps')->first()->koordinat_maps;
-            return response()->json( $coordinates);
+        // $maps = Vendor::where('slug', $slug)->first();
+
+        // if ($maps) {
+        //     $coordinates = $maps->select('koordinat_maps')->first()->koordinat_maps;
+        //     return response()->json( $coordinates);
+        // } else {
+        //     return response()->json(['error' => 'Vendor not found'], 404);
+        // }
+
+        $koordinatMaps = Vendor::where('slug', $slug)->value('koordinat_maps');
+
+        if ($koordinatMaps !== null) {
+            return response()->json($koordinatMaps);
         } else {
-            return response()->json(['error' => 'Vendor not found'], 404);
+            return response()->json(['error' => 'Vendor tidak ditemukan'], 404);
         }
         
     }
