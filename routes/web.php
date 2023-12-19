@@ -67,11 +67,13 @@ Route::controller(GoogleController::class)->group(function(){
 Route::get('/vendor', [VendorController::class, 'index']);
 Route::get('detail/{vendor:slug}', [VendorController::class, 'show']);
 Route::get('/', [VendorController::class, 'rekomendasi']);
+Route::get('maps/{vendor:slug}', [VendorController::class, 'maps']);
+
 
 // favorite
 Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware('auth');
 
 //dashboard
 Route::get('/dashboard', function () {
-    return view('dashboard.index');
+    return view('dashboard.index'); 
 });
