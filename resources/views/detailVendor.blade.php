@@ -3,8 +3,8 @@
 @section('container')
 
 <div class="flex justify-center mt-11">
+    <!-- title -->
     <div class="flex flex-col vendorPreview  max-w-4xl mr-12">
-        <!-- title -->
         <div class="title flex justify-between">
             <div class="flex">
                 @if($vendor->profil)
@@ -72,17 +72,24 @@
             </div>
         </div>
         @if($vendor->image)
-            <div style="overflow: hidden;">
+            <div class="overflow-hidden mt-4 h-96" style="width: 877px;">
                 <img src="{{ asset('storage/image/' . $vendor->image) }}"
                     alt="{{ $vendor->category->name }}"
-                    class="img-fluid  h-3/4 w-2xl rounded-lg mt-4 max-h-350 overflow-hidden">
+                    class="img-fluid rounded-lg h-full w-full object-cover" >
             </div>
         @else
             <img src="https://source.unsplash.com/1200x1000?{{ $vendor->category->name }}"
                 alt="{{ $vendor->category->name }}" class="img-fluid mt-3">
         @endif
-        <div id="map" style="height: 380px" class="h-auto max-w-full"></div>
+        <div class="my-14">
+            <h1 class="font-bold">Deskripsi</h1>
+            <p style="width: 746.61px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error distinctio cupiditate pariatur nulla quasi et totam, aspernatur maxime mollitia maiores vero dolor sunt veniam reprehenderit laudantium nihil nemo? Libero, consequatur.</p>
+
+        </div>
+        <h1 class="font-bold">Lokasi</h1>
+        <div id="map" style="height:500px; width:600px"class="max-w-full mb-20"></div>
     </div>
+    
     <!-- contactInfo -->
     <div class="detailContact m-5">
         <div href="#" class=" p-6 bg-white border border-gray-200 rounded-lg shadow">
@@ -135,7 +142,6 @@
             </div>
         </div>
     </div>
-    
 </div>
 <script>
     
