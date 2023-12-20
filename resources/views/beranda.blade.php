@@ -15,7 +15,7 @@
 
     <!-- navbar -->
     <section class="bg-center bg-no-repeat bg-blend-multiply"
-        style="background-image: url('{{ asset('storage/image/wedding1.jpg') }}');">
+        style="background-image: url('{{ asset('storage/image/wedding1.jpg') }}')">
         <nav class="bg-opacity-50 border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -98,16 +98,14 @@
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                 Cherish Wedding</h1>
-            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48">In love's unity, navigating
-                life's waves together, cherishing joys, overcoming trials, fostering an eternal journey filled with
-                commitment and growth.</p>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48"> Jasa pernikahan yang menyediakan pengalaman penuh perhatian dan profesionalisme tanpa kelebihan.</p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             </div>
         </div>
     </section>
 
     <section class="text-center bg-white py-10">
-        <h2 class="text-3xl font-semibold underline mb-20 mt-0">KATEGORI</h2>
+        <h2 class="text-3xl font-semibold mb-20 mt-30">Kategori</h2>
         <div class="flex justify-center">
             <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 max-w-3xl">
                 <div class="bg-white col-span-1 row-span-1">
@@ -116,7 +114,7 @@
                             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">MUA</h5>
                         </a>
                         <a href="/vendor?category%5B%5D=1">
-                            <img class="p-8 rounded-t-lg" src="https://source.unsplash.com/1200x1200?makeup-wedding"
+                            <img class="p-8 rounded-t-lg" src="{{ asset('storage/image/MUA.jpg') }}"
                                 alt="makeup image" />
                         </a>
                     </div>
@@ -143,7 +141,7 @@
                         </a>
                         <a href="/vendor?category%5B%5D=3">
                             <img class="p-8 rounded-t-lg"
-                                src="{{ asset('storage/image/Venue.png') }}" alt="venue image" />
+                                src="{{ asset('storage/image/venue2.jpg') }}" alt="venue image" />
                         </a>
                     </div>
                 </div>
@@ -166,8 +164,8 @@
 
 
     <section class="text-center bg-gray-100 py-10">
-        <p class="text-lg text-gray-600">Tentang Kami</p>
-        <h2 class="text-3xl font-semibold mb-2 mt-0">Kenapa Harus Memilih Kami?</h2>
+
+        <h2 class="text-3xl font-semibold mb-20 mt-10">Kenapa Harus Memilih Kami?</h2>
 
         <div class="flex flex-col lg:flex-row items-center justify-center mt-8 ml-10">
             <div class="w-full lg:w-1/2 lg:order-last lg:text-left items-center ml-[95px]">
@@ -211,7 +209,7 @@
 
 
     <section class="text-center bg-white py-10 mt-4 ">
-        <h2 class="text-3xl font-semibold underline mb-20 mt-0">MAKE UP ARTIST</h2>
+        <h2 class="text-3xl font-semibold mb-20 mt-10">Rekomendasi Untuk Anda</h2>
         <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center">
             <!-- Kartu 1 -->
@@ -257,7 +255,7 @@
                                 </div>
                             @endif
                             <div class="ml-3 sm:ml-4">
-                                <p class="text-lg font-medium font-thin dark:text-white">
+                                <p class="text-lg font-medium font-normal dark:text-white">
                                     <strong>
                                         {{ $rekomen->name }}
                                     </strong>
@@ -265,9 +263,9 @@
                             </div>
                         </a>
                         <div class="mt-2 mb-4">
-                            <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">
+                            <p class="px-4 sm:px-4 flex text-lg font-medium font-normal dark:text-white">
                                 {{ $rekomen->category->name }}</p>
-                            <p class="px-4 sm:px-4 flex text-lg font-medium font-thin dark:text-white">
+                            <p class="px-4 sm:px-4 flex text-lg font-medium font-normal dark:text-white">
                                 {{ $rekomen->city->name }}</p>
                         </div>
                     </div>
