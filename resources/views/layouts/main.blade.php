@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://kit.fontawesome.com/6b738b2603.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="img/logo.png">
+    <link rel="icon" href="{{ asset('storage/image/logo.png') }}">
 
     {{-- leaflet --}}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"

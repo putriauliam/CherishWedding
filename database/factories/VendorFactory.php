@@ -20,7 +20,7 @@ class VendorFactory extends Factory
             'name' => $this->faker->sentence(mt_rand(1,2)),
             'slug' => $this->faker->slug(),
             'address' => $this->faker->address(),
-            'koordinat_maps' => $this->faker->latitude().",".$this->faker->longitude(),
+            'koordinat_maps' => $this->faker->latitude($min = -6, $max = 90).",".$this->faker->longitude($min = -100, $max = 180),
             'detail' =>collect($this->faker->paragraphs(mt_rand(5,10)))
                         ->map(fn($p) => "<p>$p</p>")
                         ->implode(''),
