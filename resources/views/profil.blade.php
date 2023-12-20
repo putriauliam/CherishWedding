@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="namaProfil">
-        <h1 class="font-bold text-center text-2xl mb-2">Nama</h1>
+        <h1 class="font-bold text-center text-2xl mb-2">{{ $user->name }}</h1>
         <!-- Follow us -->
         <div class="flex justify-center">
             <ul class="font-medium flex">
@@ -21,23 +21,23 @@
                         <div class=" w-10 h-10 flex items-center justify-center bg-gray-300 rounded-full border border-gray-200">
                         <i class="fa-solid fa-user"></i>
                         </div>
-                        <p class="pl-1">Negan Smith</p>
+                        <p class="pl-1">{{ $user->username }}</p>
                     </div>
                 </li>
-                <li class="">
+                {{-- <li class="">
                     <div class="pl-3 flex items-center">
                         <div class="w-10 h-10 flex items-center justify-center bg-gray-300 rounded-full border border-gray-200">
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <p class="pl-1">+62. 5555.5555.5555</p>
                     </div>
-                </li>
+                </li> --}}
                 <li class="">
                     <div class="pl-3 flex items-center">
                         <div class="w-10 h-10 flex items-center justify-center bg-gray-300 rounded-full border border-gray-200">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
-                        <p class="pl-1">Cherishwedding@gmail.com</p>
+                        <p class="pl-1">{{ $user->email }}</p>
                     </div>
                 </li>
             </ul>

@@ -31,10 +31,10 @@ class FavoriteController extends Controller
     public function store(Request $request)
     {
         $user = auth()->user()->id;
-        $exist = Favorite::where('user_id', $user)->where('vendor_id', $request->vendor_id)->first();
+        $ada = Favorite::where('user_id', $user)->where('vendor_id', $request->vendor_id)->first();
 
         
-        if ($exist) {
+        if ($ada) {
             return back()->with('fail', 'Vendor sudah ada dalam daftar favorit');
         } else {
             Favorite::create([
