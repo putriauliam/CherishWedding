@@ -2,9 +2,9 @@
 
 @section('container')
 
-<div class="flex justify-center mt-11">
+<div class="flex justify-center mt-11 ">
     <!-- title -->
-    <div class="flex flex-col vendorPreview  max-w-4xl mr-12">
+    <div class=" flex flex-col vendorPreview  max-w-4xl mr-12 ml-20">
         <div class="title flex justify-between">
             <div class="flex">
                 @if($vendor->profil)
@@ -17,8 +17,8 @@
                         alt="{{ $vendor->category->name }}" class="ml-3 w-16 h-16 rounded-full">
                 @endif
                 <div class="pl-3">
-                    <p class="font-bold" alt="nama jasa">Wedding Fotografi</p>
-                    <p class="font-medium" alt="nama vendor">{{ $vendor->name }}</p>
+                    {{-- <p class="font-bold" alt="nama jasa">Wedding Fotografi</p> --}}
+                    <p class="font-medium  mt-2" alt="nama vendor"><strong>{{ $vendor->name }}</strong></p>
                     <p alt="kategori vendor">{{ $vendor->category->name }}</p>
                 </div>
             </div>
@@ -83,7 +83,7 @@
         @endif
         <div class="my-14">
             <h1 class="font-bold">Deskripsi</h1>
-            <p style="width: 746.61px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error distinctio cupiditate pariatur nulla quasi et totam, aspernatur maxime mollitia maiores vero dolor sunt veniam reprehenderit laudantium nihil nemo? Libero, consequatur.</p>
+            <p style="width: 746.61px;">{!! $vendor->detail !!}</p>
 
         </div>
         <h1 class="font-bold">Lokasi</h1>
@@ -91,7 +91,7 @@
     </div>
     
     <!-- contactInfo -->
-    <div class="detailContact m-5">
+    <div class="detailContact m-5 ">
         <div href="#" class=" p-6 bg-white border border-gray-200 rounded-lg shadow">
             <div class="judulContact flex w-64">
                 @if($vendor->profil)
@@ -103,7 +103,7 @@
                     <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
                         alt="{{ $vendor->category->name }}" class="w-8 h-8 rounded-full">
                 @endif
-                <h1 class="ml-3">Wedding Fotografi</h1>
+                <h1 class="ml-3"><strong>{{ $vendor->name }}</strong></h1>
             </div>
             <div class="kategoriLokasi flex">
                 <p>{{ $vendor->category->name }}</p>

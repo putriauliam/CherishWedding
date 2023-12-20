@@ -48,9 +48,9 @@
     <div class="flex items-center justify-end p-4">
         <div class="relative text-gray-600">
             <form action="/vendor">
-                {{-- <i class="absolute top-0 mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass"></i> --}}
+                <i class="absolute top-0 mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass"></i>
                 <input type="search" name="search" placeholder="Cari Vendor"
-                    class="bg-white h-10 w-full pl-5 pr-5 rounded-full text-sm focus:outline-none"
+                    class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none"
                     value="{{ request('search') }}">
                 <!-- <button type="submit" class="absolute inset-y-0 end-0 flex items-center pe-3">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -141,6 +141,7 @@
                             </button class="flex">
                         </form>
 
+                        <a  href="/detail/{{ $v->slug }}">
                         <div>
                             @if($v->image)
                             <div class="overflow-hidden">
@@ -154,6 +155,7 @@
                                     alt="makeup image" />
                             @endif
                         </div>
+                        </a>
 
                         <!-- profil vendor -->
                         <a  href="/detail/{{ $v->slug }}">
@@ -189,7 +191,7 @@
         @endif
 
         <div class="my-4 ml-4">
-        {{ $vendor->links() }}
+        {{ $vendor->links('vendor.pagination.tailwind') }}
         {{-- pagination --}}
         </div>
 
