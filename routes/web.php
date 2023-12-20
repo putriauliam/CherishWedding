@@ -1,12 +1,13 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\RegisterController;
-use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,9 +80,11 @@ Route::get('/dashboard', function () {
 });
 
 // profil user
-Route::get('/profil', function () {
-    return view('profil', [
-        'title' => 'profil user',
-        'active' => 'profil'
-    ]);
-});
+// Route::get('/profil', function () {
+//     return view('profil', [
+//         'title' => 'profil user',
+//         'active' => 'profil'
+//     ]);
+// });
+
+Route::get('/profil', [ProfileController::class, 'index']);
