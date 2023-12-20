@@ -98,7 +98,7 @@
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                 Cherish Wedding</h1>
-            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48"> Jasa pernikahan yang menyediakan pengalaman penuh perhatian dan profesionalisme tanpa kelebihan.</p>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan pengalaman penuh perhatian dan profesionalisme serta memudahkan perencanaan pernikahan anda.</p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             </div>
         </div>
@@ -152,7 +152,7 @@
                         </a>
                         <a href="/vendor?category%5B%5D=4">
                             <img class="p-8 rounded-t-lg"
-                                src="{{ asset('storage/image/Katering.png') }}"
+                                src="{{ asset('storage/image/CateringNew.png') }}"
                                 alt="catering image" />
                         </a>
                     </div>
@@ -172,9 +172,9 @@
                 <div class="max-w-md mt-5">
                     <h2 class="text-3xl font-semibold mb-2 text-center">Vendor Pernikahan Terlengkap</h2>
                     <p class="text-justify mt-6">
-                        Cherish Wedding adalah pilihan yang sempurna untuk memenuhi segala kebutuhan pernikahan Anda,
-                        menghadirkan pengalaman yang tak terlupakan dan sesuai dengan impian Anda. Berikut adalah
-                        beberapa alasan mengapa Anda harus memilih Cherish Wedding untuk mencari venue, fotografer,
+                        Cherish Wedding adalah pilihan yang sempurna untuk memenuhi segala kebutuhan pernikahan anda,
+                        menghadirkan pengalaman yang tak terlupakan dan sesuai dengan impian anda. Berikut adalah
+                        beberapa alasan mengapa anda harus memilih Cherish Wedding untuk mencari venue, fotografer,
                         makeup, dan katering.
                     </p>
                     <!-- Tambahkan ikon-ikon di sini -->
@@ -327,10 +327,10 @@
             </div>
             <!-- Navbar -->
             <div class="text-center">
-                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Beranda</h2>
-                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Vendor</h2>
-                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white">Tentang Kami</h2>
-            </div>
+            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/">Beranda</a></h2>
+            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/vendor">Vendor</a></h2>
+            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/tentang">Tentang Kami</a></h2>
+        </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
