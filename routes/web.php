@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -73,15 +74,23 @@ Route::get('maps/{vendor:slug}', [VendorController::class, 'maps']);
 
 // favorite
 Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware('auth');
+Route::delete('/favorites/delete', [FavoriteController::class, 'destroy']);
+
 
 //dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// });
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+
 //dashboard
 Route::get('/dataVendor', function () {
     return view('dashboard.dataVendor');
 });
+
 
 // profil user
 // Route::get('/profil', function () {
@@ -91,4 +100,4 @@ Route::get('/dataVendor', function () {
 //     ]);
 // });
 
-Route::get('/profil', [ProfileController::class, 'index']);
+Route::get('/profil/{id}', [ProfileController::class, 'show'])->middleware('auth');
