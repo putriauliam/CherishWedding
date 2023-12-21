@@ -63,6 +63,14 @@
             <img src="{{ asset('storage/image/makeup.png') }}" alt="Icon" class="h-32 w-auto flex-shrink-0">
             <p class="font-bold text-xl dark:text-gray-400 ml-4">10 MUA</p>
         </a>
+        <a href="#" class="block max-w-sm p-6 bg-red-500 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative flex items-center">
+            <img src="{{ asset('storage/image/catering.png') }}" alt="Icon" class="h-24 w-auto flex-shrink-0">
+            <p class="font-bold text-xl dark:text-gray-400 ml-4">10 Katering</p>
+        </a>
+        <a href="#" class="block max-w-sm p-6 bg-yellow-300 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative flex items-center">
+            <img src="{{ asset('storage/image/wedding.png') }}" alt="Icon" class="h-24 w-auto flex-shrink-0">
+            <p class="font-bold text-xl dark:text-gray-400 ml-4">10 Venue</p>
+        </a>
     </div>
     <h1 class="mb-15 mt-20 text-2xl font-semibold">Entitas</h1>
     
