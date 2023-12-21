@@ -73,7 +73,16 @@
         </a>
     </div>
     <h1 class="mb-15 mt-20 text-2xl font-semibold">Entitas</h1>
-    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-14 mb-20">
+        <a href="#" class="block max-w-sm p-6 bg-blue-400 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative flex items-center">
+            <img src="{{ asset('storage/image/users.png') }}" alt="Icon" class="h-28 w-auto flex-shrink-0">
+            <p class="font-bold text-xl dark:text-gray-400 ml-4">10 User</p>
+        </a>
+        <a href="#" class="block max-w-sm p-6 bg-blue-300 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative flex items-center">
+            <img src="{{ asset('storage/image/admin-alt.png') }}" alt="Icon" class="h-28 w-auto flex-shrink-0">
+            <p class="font-bold text-xl dark:text-gray-400 ml-4">10 Seller</p>
+        </a>
+    </div>
 </div>
 
 </body>
