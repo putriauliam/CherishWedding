@@ -78,6 +78,10 @@ Route::post('/favorites/add', [FavoriteController::class, 'store'])->middleware(
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+//dashboard
+Route::get('/dataVendor', function () {
+    return view('dashboard.dataVendor');
+});
 
 // profil user
 // Route::get('/profil', function () {
