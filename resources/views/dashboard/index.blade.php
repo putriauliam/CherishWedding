@@ -24,7 +24,7 @@
          <li>
          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ asset('storage/image/logo.png') }}" class="h-10" alt="Flowbite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white">Cherish Wedding</span>
+            <span class="self-center text-1xl font-semibold whitespace-nowrap text-black dark:text-white">Cherish Wedding</span>
         </a>
          </li>
          <li>
@@ -48,7 +48,24 @@
 </aside>
 
 <div class="p-4 sm:ml-64">
-   
+    <h1 class="mb-4 text-2xl text-gray-900 dark:text-white font-semibold">
+        <span>DASHBOARD</span>
+        <hr class="border-b-1 border-black pb-2">
+    </h1>
+    <!-- Cards -->
+    <h1 class="mb-15 mt-20 text-2xl font-semibold">Kategori</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-14 mb-20">
+        <a href="#" class="block max-w-sm p-6 bg-blue-200 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative flex items-center">
+            <img src="{{ asset('storage/image/fotografer2.png') }}" alt="Icon" class="h-20 w-auto flex-shrink-0">
+            <p class="font-bold text-xl dark:text-gray-400 ml-4">10 Fotografer</p>
+        </a>
+        <a href="#" class="block max-w-sm p-6 bg-green-400 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative flex items-center">
+            <img src="{{ asset('storage/image/makeup.png') }}" alt="Icon" class="h-32 w-auto flex-shrink-0">
+            <p class="font-bold text-xl dark:text-gray-400 ml-4">10 MUA</p>
+        </a>
+    </div>
+    <h1 class="mb-15 mt-20 text-2xl font-semibold">Entitas</h1>
+    
 </div>
 
 </body>
