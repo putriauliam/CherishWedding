@@ -16,12 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(5)->create();
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'username' => 'Admin',
+            'google_id' => '',
+            'password' => bcrypt('12345'),
+            'image' => '',
+            'Type' => 'admin'
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
 
         Category::create([
             'name' => ' MUA',
@@ -57,7 +61,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'malang'
         ]);
 
+        User::factory(5)->create();
         Vendor::factory(17)->create();
-        // city::factory(3)->create();
     }
 }

@@ -62,10 +62,18 @@
             </form>
         </div>
     </div>
-    <button
+    @auth
+        
+    <a href="/profil/{{ auth()->user()->id }}"
         class="bg-gray-500 text-white  rounded-full p-2 py-1 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
         <i class="fa-solid fa-heart"></i>
-    </button>
+    </a>
+    @else
+    <a href="/login"
+        class="bg-gray-500 text-white  rounded-full p-2 py-1 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
+        <i class="fa-solid fa-heart"></i>
+    </a>
+    @endauth
 </div>
 
 
@@ -143,6 +151,7 @@
 
                         <a  href="/detail/{{ $v->slug }}">
                         <div>
+                            {{-- gambar card --}}
                             @if($v->image)
                             <div class="overflow-hidden">
                                 <img src="{{ asset('storage/image/' . $v->image) }}" alt="{{ $v->category->name }}"
@@ -160,6 +169,7 @@
                         <!-- profil vendor -->
                         <a  href="/detail/{{ $v->slug }}">
                             <div class=" flex items-center">
+                                {{-- gmbar profil --}}
                                 @if($v->profil)
                                     <div style="overflow: hidden;">
                                         <img src="{{ asset('storage/image/' . $v->profil) }}"

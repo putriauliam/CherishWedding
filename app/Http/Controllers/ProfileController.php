@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Vendor;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
@@ -47,9 +49,32 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Vendor $vendor, $id)
     {
-        //
+        // $userId = auth()->id();
+        // $vendor = Vendor::find($id);
+        // $ids = DB::table('favorites')->where('user_id', $userId)->select('vendor_id')->pluck('vendor_id');
+
+        // Dapatkan ID pengguna yang sudah terautentikasi
+        $userId = Auth::id();
+        $user = Auth::user();
+        // Temukan vendor dengan ID yang diberikan
+        $vendor = Vendor::find($id);
+
+        // Dapatkan ID vendor yang difavoritkan oleh pengguna yang sudah terautentikasi
+        $favoriteVendorIds = DB::table('favorites')->where('user_id', $userId)->pluck('vendor_id');
+
+        // Ambil data vendor yang difavoritkan
+        $favoriteVendors = Vendor::whereIn('id', $favoriteVendorIds)->get();
+
+        // Kirimkan data ke view
+        return view('profil', [
+            'vendor' => $vendor,
+            'favoriteVendors' => $favoriteVendors,
+            'title' => 'profil user',
+            'active' => 'profil',
+            'user' => $user
+        ]);
     }
 
     /**

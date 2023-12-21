@@ -46,35 +46,21 @@ class FavoriteController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Favorite $favorite)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Favorite $favorite)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateFavoriteRequest $request, Favorite $favorite)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Favorite $favorite)
+    public function destroy(Request $request)
     {
-        //
+        $user = auth()->user()->id;
+        $ada = Favorite::where('user_id', $user)->where('vendor_id', $request->vendor_id)->first();
+
+
+        if ($ada) {
+            $ada->delete();
+            return back()->with('success', 'berhasil dihapus dari daftar favorit');
+        } else {
+            return back()->with('fail', 'vendor tidak ada dalam daftar favorit');
+        }
     }
 }
