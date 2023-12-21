@@ -196,15 +196,13 @@
                         </a>
                 @endforeach
             </div>
-        @else
+            @else
             <p class="text-center fs-4">No post found.</p>
-        @endif
-
-        <div class="my-4 ml-4">
-        {{ $vendor->links('vendor.pagination.tailwind') }}
-        {{-- pagination --}}
-        </div>
-
+            @endif            
+            <div class="mr-20 mb-5">
+                {{ $vendor->links('vendor.pagination.tailwind') }}
+                {{-- pagination --}}
+            </div>
     </div>
 </div>
 

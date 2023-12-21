@@ -78,11 +78,19 @@ Route::delete('/favorites/delete', [FavoriteController::class, 'destroy']);
 
 
 //dashboard
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard.index');
 // });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+
+
+//dashboard
+Route::get('/dataVendor', function () {
+    return view('dashboard.dataVendor');
+});
+
 
 // profil user
 // Route::get('/profil', function () {
