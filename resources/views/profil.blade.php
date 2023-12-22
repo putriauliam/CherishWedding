@@ -6,17 +6,18 @@
     <div class="bg-red-800 h-32 mb-20" style="background-image: url('https://source.unsplash.com/autoxauto/');">
         <div class="h-10">
         </div>
+        <div class="flex justify-center">
 
-        <!-- Struktur konten dengan gambar, tombol edit, dan modal -->
-        <div class="flex justify-center items-center">
-            <div class="relative">
-                <img class="h-40 w-40 rounded-full" src="{{ asset('storage/image/user.png') }}" alt="">
-                <div class="absolute bottom-2 right-2">
-                    <button id="editButton" class="bg-gray-200 p-1 rounded-full">
-                        <i class="fas fa-edit text-gray-600 fa-lg"></i>
-                    </button>
-                </div>
-            </div>
+            @if($user->image)
+                    <div style="overflow: hidden;">
+                        <img src="{{ asset('storage/image/' . $user->image) }}"
+                            alt="{{ $user->image }}" class="h-40 w-40 rounded-full border border-gray-900">
+                    </div>
+                @else
+                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                        alt="{{ $user->name }}" class="h-40 w-40 rounded-full border border-gray-900">
+                @endif
+
         </div>
     </div>
     <div class="namaProfil">
