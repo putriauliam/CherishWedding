@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Vendor;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -22,12 +23,25 @@ class DashboardController extends Controller
     {
         if (Auth::user()->Type == 'admin') {
             return view('dashboard.index', [
-                "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString()
+                "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString(),
+                "mua" => Vendor::where('category_id', '=', '1')->count(),
+                "foto" => Vendor::where('category_id', '=', '2')->count(),
+                "venue" => Vendor::where('category_id', '=', '3')->count(),
+                "katering" => Vendor::where('category_id', '=', '4')->count(),
+                "totalUser" => User::count(),
+                "totalVendor" => Vendor::count(),
 
             ]);
         } else {
             abort(403);
         }
+    }
+
+    public function totalVendor()
+    {
+        return view('dashboard.index', [
+            "mua" => Vendor::where('category_id', '=', '1')->count()
+        ]);
     }
 
     /**

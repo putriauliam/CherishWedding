@@ -47,27 +47,27 @@
     <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
         <div class="flex flex-col items-center justify-center">
             <img src="{{ asset('storage/image/mitra.png') }}" alt="mitra" class="w-20 h-20" />
-            <dt class="mb-2 text-3xl font-extrabold">150+</dt>
+            <dt class="mb-2 text-3xl font-extrabold">{{ $totalVendor }}</dt>
             <dd class="text-gray-500 dark:text-gray-400">Mitra Vendor</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
             <img src="{{ asset('storage/image/fotografer2.png') }}" alt="fotografer" class="w-20 h-20" />
-            <dt class="mb-2 text-3xl font-extrabold">56</dt>
+            <dt class="mb-2 text-3xl font-extrabold">{{ $foto }}</dt>
             <dd class="text-gray-500 dark:text-gray-400">Fotografer</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
             <img src="{{ asset('storage/image/catering.png') }}" alt="katering" class="w-20 h-20" />
-            <dt class="mb-2 text-3xl font-extrabold">33</dt>
+            <dt class="mb-2 text-3xl font-extrabold">{{ $katering }}</dt>
             <dd class="text-gray-500 dark:text-gray-400">Katering</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
              <img src="{{ asset('storage/image/makeup.png') }}" alt="mua" class="w-20 h-20" />
-            <dt class="mb-2 text-3xl font-extrabold">47</dt>
+            <dt class="mb-2 text-3xl font-extrabold">{{ $mua }}</dt>
             <dd class="text-gray-500 dark:text-gray-400">MUA</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
              <img src="{{ asset('storage/image/wedding.png') }}" alt="venue" class="w-20 h-20" />
-            <dt class="mb-2 text-3xl font-extrabold">87</dt>
+            <dt class="mb-2 text-3xl font-extrabold">{{ $venue }}</dt>
             <dd class="text-gray-500 dark:text-gray-400">Venue</dd>
         </div>
         <div class="flex flex-col items-center justify-center">

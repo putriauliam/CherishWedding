@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Vendor;
+use App\Models\Category;
+use App\Models\City;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -51,9 +53,6 @@ class ProfileController extends Controller
      */
     public function show(Vendor $vendor, $id)
     {
-        // $userId = auth()->id();
-        // $vendor = Vendor::find($id);
-        // $ids = DB::table('favorites')->where('user_id', $userId)->select('vendor_id')->pluck('vendor_id');
 
         // Dapatkan ID pengguna yang sudah terautentikasi
         $userId = Auth::id();
@@ -65,11 +64,14 @@ class ProfileController extends Controller
         $favoriteVendorIds = DB::table('favorites')->where('user_id', $userId)->pluck('vendor_id');
 
         // Ambil data vendor yang difavoritkan
-        $favoriteVendors = Vendor::whereIn('id', $favoriteVendorIds)->get();
+        $favoriteVendors = Vendor::whereIn('id', $favoriteVendorIds)->latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString();
+        
 
         // Kirimkan data ke view
         return view('profil', [
             'vendor' => $vendor,
+            "categories" => Category::all(),
+            "cities" => City::all(),
             'favoriteVendors' => $favoriteVendors,
             'title' => 'profil user',
             'active' => 'profil',

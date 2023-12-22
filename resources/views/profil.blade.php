@@ -6,6 +6,7 @@
     <div class="bg-red-800 h-32 mb-20" style="background-image: url('https://source.unsplash.com/autoxauto/');">
         <div class="h-10">
         </div>
+
         <!-- Struktur konten dengan gambar, tombol edit, dan modal -->
         <div class="flex justify-center items-center">
             <div class="relative">
@@ -64,7 +65,7 @@
             </div>
             <!-- garis -->
             <hr class="font-medium border-b-2 border-gray-900 my-5">
-            <form action="/vendor" method="GET">
+            <form action="/profil/{{ $user->id }}" method="GET">
                 <div class="flex flex-col ">
                     <!-- filter check -->
                     <div>
@@ -73,24 +74,30 @@
                                 <h1 class=""><strong>Kategori</strong></h1>
                             </li>
                         </ul>
+                        @foreach($categories as $category)
                             <ul>
                                 <li class="flex flex-row items-center justify-between">
-                                    <h1 class="pl-5"></h1>
-                                    <input type="checkbox" name="category[]" id="" value="">
+                                    <h1 class="pl-5">{{ $category->name }}</h1>
+                                    <input type="checkbox" name="category[]" id="" value="{{ $category->id }}">
                                 </li>
                             </ul>
+                        @endforeach
+                            
                         <ul>
                             <li>
                                 <h1><strong>Kota</strong></h1>
                             </li>
                         </ul>
+                        @foreach($cities as $city)
                             <ul>
                                 <li class="flex flex-row items-center justify-between">
-                                    <h1 class="pl-5"></h1>
-                                    <input type="checkbox" name="city[]" id="" value="">
+                                    <h1 class="pl-5">{{ $city->name }}</h1>
+                                    <input type="checkbox" name="city[]" id="" value="{{ $city->id }}">
                                 </li>
 
                             </ul>
+                        @endforeach
+                            
                     </div>
                     <!-- button -->
                     <button type="submit"
