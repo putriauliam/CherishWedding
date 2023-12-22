@@ -72,6 +72,7 @@ Route::delete('/favorites/delete', [FavoriteController::class, 'destroy']);
 
 //dashboard
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard/cetak', [DashboardController::class, 'cetak']);
 
 
 Route::get('/dataVendor', function () {

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Vendor;
 use App\Models\User;
+use PDF;
 
 class DashboardController extends Controller
 {
@@ -42,6 +43,14 @@ class DashboardController extends Controller
         return view('dashboard.index', [
             "mua" => Vendor::where('category_id', '=', '1')->count()
         ]);
+    }
+
+    public function cetak()
+    {
+    	$vendor = Vendor::all();
+ 
+    	$pdf = PDF::loadview('vendor-pdf',['vendor'=>$vendor]);
+    	return $pdf->stream();
     }
 
     /**
