@@ -9,6 +9,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TrixController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,6 +92,9 @@ Route::get('/dataVendor', function () {
     return view('dashboard.dataVendor');
 });
 
+Route::get('/trix', [TrixController::class, 'index']);
+Route::get('/upload', [TrixController::class, 'upload']);
+Route::get('/store', [TrixController::class, 'store']);
 
 // profil user
 // Route::get('/profil', function () {
