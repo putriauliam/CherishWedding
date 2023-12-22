@@ -7,6 +7,7 @@
         <div class="h-10">
         </div>
         <div class="flex justify-center">
+
             @if($user->image)
                     <div style="overflow: hidden;">
                         <img src="{{ asset('storage/image/' . $user->image) }}"
@@ -16,6 +17,7 @@
                     <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
                         alt="{{ $user->name }}" class="h-40 w-40 rounded-full border border-gray-900">
                 @endif
+
         </div>
     </div>
     <div class="namaProfil">
