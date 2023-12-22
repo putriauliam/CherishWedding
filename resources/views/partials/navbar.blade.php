@@ -20,11 +20,14 @@
                     <a href="/" class="block">BERANDA</a>
                 </li>
                 <li>
-                    <a href="/vendor" class="block  {{ $active === 'vendor' ? 'font-medium border-b-2 border-gray-900' : '' }}">VENDOR</a>
+                    <a href="/vendor"
+                        class="block  {{ $active === 'vendor' ? 'font-medium border-b-2 border-gray-900' : '' }}">VENDOR</a>
                     <!-- <a href="/vendor" class="block font-medium border-b-2 border-gray-900   {{ $active === 'vendor' ? 'active' : '' }}">VENDOR</a> -->
                 </li>
                 <li>
-                    <a href="/tentang" class="block {{ $active === 'tentang' ? 'font-medium border-b-2 border-gray-900' : '' }}">TENTANG KAMI</a>
+                    <a href="/tentang"
+                        class="block {{ $active === 'tentang' ? 'font-medium border-b-2 border-gray-900' : '' }}">TENTANG
+                        KAMI</a>
                 </li>
                 <!-- font-medium border-b-2 border-gray-900 -->
                 @Auth
@@ -32,9 +35,18 @@
                         class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full md:me-0 dark:text-white"
                         type="button">
                         <span class="sr-only">Open user menu</span>
+                        @if(auth()->user()->image)
+                            <div style="overflow: hidden;">
+                                <img src="{{ asset('storage/image/' . auth()->user()->image) }}"
+                                    alt="{{ auth()->user()->image }}" class="w-8 h-8 me-2 rounded-full">
+                            </div>
+                        @else
+                            <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                                alt="{{ auth()->user()->name }}" class="w-8 h-8 me-2 rounded-full">
+                        @endif
                         {{-- <img class="w-8 h-8 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
                             alt="user photo"> --}}
-                            {{ auth()->user()->name }}
+                        {{ auth()->user()->name }}
                         <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -58,12 +70,13 @@
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                             aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
                             <li>
-                              <form action="/logout" method="post">
-                                @csrf
-                                <button type="submit" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logout</button>
-                              </form>      
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button type="submit"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logout</button>
+                                </form>
                             </li>
-                        </ul>              
+                        </ul>
                     </div>
                 @else
                     <li>

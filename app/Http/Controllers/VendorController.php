@@ -23,10 +23,6 @@ class VendorController extends Controller
             $bigtitle = ' - Kategori ' . $category->name;
         }
 
-        // if(request('city')) {
-        //     $city = City::firstWhere('name', request('city'));
-        //     $title = ' by ' . $city->name;
-        // }
         return view('vendor', [
             "title" => "Vendor",
             "bigtitle" => "Semua Vendor" . $bigtitle,

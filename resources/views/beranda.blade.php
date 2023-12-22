@@ -51,6 +51,15 @@
                                 class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full md:me-0 text-white"
                                 type="button">
                                 <span class="sr-only">Open user menu</span>
+                                @if(auth()->user()->image)
+                                    <div style="overflow: hidden;">
+                                        <img src="{{ asset('storage/image/' . auth()->user()->image) }}"
+                                            alt="{{ auth()->user()->image }}" class="w-8 h-8 me-2 rounded-full">
+                                    </div>
+                                @else
+                                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                                        alt="{{ auth()->user()->name }}" class="w-8 h-8 me-2 rounded-full">
+                                @endif
                                 {{-- <img class="w-8 h-8 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
                             alt="user photo"> --}}
                                 {{ auth()->user()->name }}
@@ -98,7 +107,8 @@
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                 Cherish Wedding</h1>
-            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan pengalaman penuh perhatian dan profesionalisme serta memudahkan perencanaan pernikahan anda.</p>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan
+                pengalaman penuh perhatian dan profesionalisme serta memudahkan perencanaan pernikahan anda.</p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             </div>
         </div>
@@ -114,8 +124,8 @@
                             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">MUA</h5>
                         </a>
                         <a href="/vendor?category%5B%5D=1">
-                            <img class="p-8 rounded-t-lg" src="{{ asset('storage/image/MUA.jpg') }}"
-                                alt="makeup image" />
+                            <img class="p-8 rounded-t-lg"
+                                src="{{ asset('storage/image/MUA.jpg') }}" alt="makeup image" />
                         </a>
                     </div>
                 </div>
@@ -327,10 +337,13 @@
             </div>
             <!-- Navbar -->
             <div class="text-center">
-            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/">Beranda</a></h2>
-            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/vendor">Vendor</a></h2>
-            <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white" ><a href="/tentang">Tentang Kami</a></h2>
-        </div>
+                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white"><a
+                        href="/">Beranda</a></h2>
+                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white"><a
+                        href="/vendor">Vendor</a></h2>
+                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white"><a
+                        href="/tentang">Tentang Kami</a></h2>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>

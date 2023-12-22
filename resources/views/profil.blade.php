@@ -7,7 +7,17 @@
         <div class="h-10">
         </div>
         <div class="flex justify-center">
-            <img class="h-40 w-40 rounded-full border border-gray-400" src="{{ asset('storage/image/user.png') }}" alt="">
+
+            @if($user->image)
+                    <div style="overflow: hidden;">
+                        <img src="{{ asset('storage/image/' . $user->image) }}"
+                            alt="{{ $user->image }}" class="h-40 w-40 rounded-full border border-gray-900">
+                    </div>
+                @else
+                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                        alt="{{ $user->name }}" class="h-40 w-40 rounded-full border border-gray-900">
+                @endif
+
         </div>
     </div>
     <div class="namaProfil">
@@ -56,7 +66,7 @@
             </div>
             <!-- garis -->
             <hr class="font-medium border-b-2 border-gray-900 my-5">
-            <form action="/vendor" method="GET">
+            <form action="/profil/{{ $user->id }}" method="GET">
                 <div class="flex flex-col ">
                     <!-- filter check -->
                     <div>
@@ -65,24 +75,30 @@
                                 <h1 class=""><strong>Kategori</strong></h1>
                             </li>
                         </ul>
+                        @foreach($categories as $category)
                             <ul>
                                 <li class="flex flex-row items-center justify-between">
-                                    <h1 class="pl-5"></h1>
-                                    <input type="checkbox" name="category[]" id="" value="">
+                                    <h1 class="pl-5">{{ $category->name }}</h1>
+                                    <input type="checkbox" name="category[]" id="" value="{{ $category->id }}">
                                 </li>
                             </ul>
+                        @endforeach
+                            
                         <ul>
                             <li>
                                 <h1><strong>Kota</strong></h1>
                             </li>
                         </ul>
+                        @foreach($cities as $city)
                             <ul>
                                 <li class="flex flex-row items-center justify-between">
-                                    <h1 class="pl-5"></h1>
-                                    <input type="checkbox" name="city[]" id="" value="">
+                                    <h1 class="pl-5">{{ $city->name }}</h1>
+                                    <input type="checkbox" name="city[]" id="" value="{{ $city->id }}">
                                 </li>
 
                             </ul>
+                        @endforeach
+                            
                     </div>
                     <!-- button -->
                     <button type="submit"

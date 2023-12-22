@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Models\Category;
+use App\Models\Vendor;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
@@ -27,27 +28,18 @@ Route::get('/', function () {
     ]);
 });
 
+// tentang kami
 Route::get('/tentang', function () {
     return view('tentang', [
         'title' => 'tentang kami',
-        'active' => 'tentang'
+        'active' => 'tentang',
+        "mua" => Vendor::where('category_id', '=', '1')->count(),
+        "foto" => Vendor::where('category_id', '=', '2')->count(),
+        "venue" => Vendor::where('category_id', '=', '3')->count(),
+        "katering" => Vendor::where('category_id', '=', '4')->count(),
+        "totalVendor" => Vendor::count()
     ]);
 });
-// Route::get('/detailVendor', function () {
-//     return view('detailVendor');
-// });
-// Route::get('/detailVendor', function () {
-//     return view('detailVendor', [
-//         'title' => 'Detail Vendor',
-//         'active' => 'detailVendor'
-//     ]);
-// });
-// Route::get('/daftar', function () {
-//     return view('daftar');
-// });
-// Route::get('/masuk', function () {
-//     return view('masuk');
-// });
 
 
 // LOGIN
@@ -78,26 +70,13 @@ Route::delete('/favorites/delete', [FavoriteController::class, 'destroy']);
 
 
 //dashboard
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard.index');
-// });
-
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 
-//dashboard
 Route::get('/dataVendor', function () {
     return view('dashboard.dataVendor');
 });
 
 
-// profil user
-// Route::get('/profil', function () {
-//     return view('profil', [
-//         'title' => 'profil user',
-//         'active' => 'profil'
-//     ]);
-// });
-
+// profil
 Route::get('/profil/{id}', [ProfileController::class, 'show'])->middleware('auth');
