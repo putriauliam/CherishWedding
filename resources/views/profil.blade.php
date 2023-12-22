@@ -7,8 +7,7 @@
         <div class="h-10">
         </div>
         <div class="flex justify-center">
-
-            <img class="h-40 w-40 rounded-full border border-gray-900" src="{{ asset('storage/image/putri.png') }}" alt="">
+            <img class="h-40 w-40 rounded-full border border-gray-400" src="{{ asset('storage/image/user.png') }}" alt="">
         </div>
     </div>
     <div class="namaProfil">
