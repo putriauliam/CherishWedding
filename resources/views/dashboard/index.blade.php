@@ -67,12 +67,19 @@
         </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
+    <div class="p-4 sm:ml-64 flex justify-between items-center relative">
         <h1 class="mb-4 text-2xl text-gray-900 dark:text-white font-semibold">
             <span>DASHBOARD</span>
-            <hr class="border-b-1 border-black pb-2">
+            <hr class="border-b-1 border-black absolute bottom-2 left-4 w-3/4 pb-2">
         </h1>
-        <!-- Cards -->
+        <button type="button" class="flex items-center justify-between text-white bg-gray-600 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+            <span>Keluar</span>
+            <i class="fas fa-sign-out-alt ml-2"></i>
+        </button>
+    </div>
+
+  <!-- Cards -->
+    <div class="p-4 sm:ml-64">
         <h1 class="mb-15 mt-20 text-2xl font-semibold">Kategori</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-14 mb-20">
             <a href="#"
