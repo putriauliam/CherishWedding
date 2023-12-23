@@ -9,7 +9,16 @@
          <!-- Struktur konten dengan gambar, tombol edit, dan modal -->
          <div class="flex justify-center items-center">
             <div class="relative">
-                <img class="h-40 w-40 rounded-full" src="{{ asset('storage/image/user.png') }}" alt="">
+                {{-- <img class="h-40 w-40 rounded-full" src="{{ asset('storage/image/user.png') }}" alt=""> --}}
+                @if($user->image)
+                <div style="overflow: hidden;">
+                    <img src="{{ asset('storage/image/' . $user->image) }}"
+                        alt="{{ $user->image }}" class="h-40 w-40 rounded-full ">
+                </div>
+            @else
+                <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                    alt="{{ $user->name }}" class="h-40 w-40 rounded-full ">
+            @endif
                 <div class="absolute bottom-2 right-2">
                     <button id="editButton" class="bg-gray-200 p-1 rounded-full">
                         <i class="fas fa-edit text-gray-600 fa-lg"></i>
