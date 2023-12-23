@@ -76,23 +76,39 @@
         </div>
     </aside>
 
+
+    
+
     <div class="p-4 sm:ml-64">
         <h1 class="mb-4 text-2xl text-gray-900 dark:text-white font-semibold">
             <span>DATA VENDOR</span>
-            <hr class="border-b-1 border-black pb-2">
+            <hr class="border-b-1 border-black mt-2">
         </h1>
+        <div class="flex justify-between items-center">
+            <div>
+                <!-- Tambah Data Vendor -->
+                <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                type="button">
+                Tambah Data Vendor
+                </button>
+                <!-- Cetak Data Vendor -->
+                <a href="/dashboard/cetak" target="_blank"
+                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                type="button">
+                Cetak Data Vendor
+                </a>
+            </div>
+            <!-- live search -->
+            <form action="/vendor">
+                    <i class="absolute mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="search" placeholder="Cari Vendor"
+                        class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none"
+                        value="{{ request('search') }}">
+            </form>
 
-        <!-- Modal toggle -->
-        <button data-modal-target="default-modal" data-modal-toggle="default-modal"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-            type="button">
-            Tambah Data Vendor
-        </button>
-        <a href="/dashboard/cetak" target="_blank"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-            type="button">
-            Cetak Data Vendor
-        </a>
+        </div>
+
 
 
 
