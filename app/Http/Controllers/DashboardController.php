@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Vendor;
+use App\Models\Category;
 use App\Models\User;
 use PDF;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class DashboardController extends Controller
 {
@@ -53,12 +55,22 @@ class DashboardController extends Controller
     	return $pdf->stream();
     }
 
+    // public function dataVendor()
+    // {
+    //     return view('dashboard.dataVendor', [
+            
+    //         "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString()
+    //     ]);
+    // }
+
+    
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        
     }
 
     /**
