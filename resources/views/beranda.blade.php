@@ -89,7 +89,7 @@
                                         <form action="/logout" method="post">
                                             @csrf
                                             <button type="submit"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logout</button>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">Keluar</button>
                                         </form>
                                     </li>
                                 </ul>
