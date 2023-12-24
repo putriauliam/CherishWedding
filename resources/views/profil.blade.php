@@ -16,7 +16,7 @@
                         alt="{{ $user->image }}" class="h-40 w-40 rounded-full ">
                 </div>
             @else
-                <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                <img src="{{ asset('storage/image/user.png' ) }}"
                     alt="{{ $user->name }}" class="h-40 w-40 rounded-full ">
             @endif
                 <div class="absolute bottom-2 right-2">
