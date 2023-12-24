@@ -41,7 +41,7 @@
                                     alt="{{ auth()->user()->image }}" class="w-8 h-8 me-2 rounded-full">
                             </div>
                         @else
-                            <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                            <img src="{{ asset('storage/image/user.png' ) }}"
                                 alt="{{ auth()->user()->name }}" class="w-8 h-8 me-2 rounded-full">
                         @endif
                         {{-- <img class="w-8 h-8 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
