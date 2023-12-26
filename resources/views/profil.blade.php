@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="mb-5">
-    <div class="bg-red-800 h-32 mb-20" style="background-image: url('https://source.unsplash.com/autoxauto/');">
+    <div class="h-32 mb-20" style="background-image: url('https://source.unsplash.com/2080x800/');">
         <div class="h-10">
         </div>
 

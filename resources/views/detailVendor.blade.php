@@ -84,10 +84,10 @@
         <div class="my-14">
             <h1 class="font-bold">Deskripsi</h1>
             <p style="width: 746.61px;">{!! $vendor->detail !!}</p>
-
         </div>
+        
         <h1 class="font-bold">Lokasi</h1>
-        <div id="map" style="height:500px; width:600px"class="max-w-full mb-20"></div>
+        <div id="map" style="height:500px; width:800px"class="max-w-full mb-20"></div>
     </div>
     
     <!-- contactInfo -->
@@ -136,6 +136,14 @@
                                 <i class="fa-brands fa-instagram"></i>
                             </div>
                             <p class="ml-12 mb-0">{{ $vendor->instagram }}</p>
+                        </div>
+                    </li>
+                    <li class="mb-4 flex items-center">
+                        <div class="relative flex items-center">
+                            <div class="absolute w-10 h-10 flex items-center justify-center rounded-full">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <p class="ml-12 mb-0">Detail Alamat</p>
                         </div>
                     </li>
                 </ul>
