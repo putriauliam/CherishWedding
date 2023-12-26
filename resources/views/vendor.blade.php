@@ -186,10 +186,10 @@
                             </div>
                             <!-- kategori dan alamat vendor -->
                             <div class="mt-2 mb-4">
-                                <p class="px-2 flex text-xs font-hard font-thin dark:text-white">
+                                <p class="px-2 flex text-xs font-hard font-normal dark:text-white">
                                     {{ $v->category->name }}
                                 </p>
-                                <p class="px-2 flex text-xs font-medium font-thin dark:text-white">{{ $v->city->name }}
+                                <p class="px-2 flex text-xs font-medium font-normal dark:text-white">{{ $v->city->name }}
                                     </p>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                 @endforeach
             </div>
             @else
-            <p class="text-center fs-4">No post found.</p>
+            <p class="text-center fs-4">Hasil tidak ditemukan.</p>
             @endif            
             <div class="mr-20 mb-5">
                 {{ $vendor->links('vendor.pagination.tailwind') }}
