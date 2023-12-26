@@ -234,7 +234,7 @@
 
                         <a href="/detail/{{ $rekomen->slug }}">
                             @if($rekomen->image)
-                                <img src="{{ asset('storage/image/' . $rekomen->image) }}"
+                                <img src="{{ asset('storage/' . $rekomen->image) }}"
                                     alt="{{ $rekomen->category->name }}" class="p-4 sm:p-8 rounded-t-lg">
                             @else
                                 <img class="p-4 sm:p-8 rounded-t-lg"
@@ -255,7 +255,7 @@
                             @if($rekomen->profil)
                                 <div style="overflow: hidden;"
                                     class="flex-shrink-0 rounded-full overflow-hidden border-2 border-gray-200">
-                                    <img src="{{ asset('storage/image/' . $rekomen->profil) }}"
+                                    <img src="{{ asset('storage/' . $rekomen->profil) }}"
                                         alt="{{ $rekomen->profil }}" class="w-12 h-12 sm:w-20 sm:h-20">
                                 </div>
                             @else

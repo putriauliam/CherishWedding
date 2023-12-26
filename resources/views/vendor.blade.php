@@ -154,7 +154,7 @@
                             {{-- gambar card --}}
                             @if($v->image)
                             <div class="overflow-hidden">
-                                <img src="{{ asset('storage/image/' . $v->image) }}" alt="{{ $v->category->name }}"
+                                <img src="{{ asset('storage/' . $v->image) }}" alt="{{ $v->category->name }}"
                                     class="p-3 rounded-t-lg h-44 w-44 object-cover">
 
                             </div>
@@ -172,7 +172,7 @@
                                 {{-- gmbar profil --}}
                                 @if($v->profil)
                                     <div style="overflow: hidden;">
-                                        <img src="{{ asset('storage/image/' . $v->profil) }}"
+                                        <img src="{{ asset('storage/' . $v->profil) }}"
                                             alt="{{ $v->profil }}" class="ml-3 mr-2 w-8 h-8 rounded-full justify-between">
                                     </div>
                                 @else

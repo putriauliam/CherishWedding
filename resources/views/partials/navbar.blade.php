@@ -37,7 +37,7 @@
                         <span class="sr-only">Open user menu</span>
                         @if(auth()->user()->image)
                             <div style="overflow: hidden;">
-                                <img src="{{ asset('storage/image/' . auth()->user()->image) }}"
+                                <img src="{{ asset('storage/' . auth()->user()->image) }}"
                                     alt="{{ auth()->user()->image }}" class="w-8 h-8 me-2 rounded-full">
                             </div>
                         @else

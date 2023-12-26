@@ -27,11 +27,10 @@
             </a>
         </div>
         <!-- live search -->
-        <form action="/vendor">
+        <form action="">
                 <i class="absolute mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="search" placeholder="Cari Vendor"
-                    class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none"
-                    value="{{ request('search') }}">
+                <input type="search" id="search" name="search" placeholder="Cari Vendor"
+                    class="bg-white h-10 pl-10 pr-5 rounded-full text-sm focus:outline-none" >
         </form>
 
     </div>
@@ -307,7 +306,8 @@
     </button>
 </div>
 @endif
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+<div class="data-table">
+        <table class="data-tablee w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
@@ -330,7 +330,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="content">
                 @foreach($vendor as $v)
                     <tr
                         class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -351,7 +351,7 @@
                             {{ currency_IDR($v->price) }}
                         </td>
                         <td class="px-6 py-4">
-                            <a href=""
+                            <a href="/dataVendor/{{ $v->slug}}/edit"
                                 class="inline-flex items-center justify-center w-6 h-6 me-2 text-sm font-semibold text-gray-800 bg-blue-500 rounded-full dark:bg-gray-700 dark:text-gray-300">
                                 <svg class="w-2.5 h-2.5 text-white" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
@@ -359,7 +359,7 @@
                                         stroke-width="2"
                                         d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279" />
                                 </svg>
-                                <span class="sr-only">Icon description</span>
+                                <span class="sr-only">edit</span>
                             </a>
                             <a href="/dataVendor/{{ $v->slug }}"
                                 class="inline-flex items-center justify-center w-6 h-6 me-2 text-sm font-semibold text-gray-800 bg-green-500 rounded-full dark:bg-gray-700 dark:text-gray-300">
@@ -404,6 +404,7 @@
                 @endforeach
             </tbody>
         </table>
+        
     </div>
     <div class="mr-20 mb-5 mt-5">
         {{-- pagination --}}
@@ -435,25 +436,51 @@
                 preview.src = '';
                 preview.classList.add('hidden');
             };
+        };
 
-            // function previewProfil(input) {
-            // const preview = document.getElementById('profil_preview');
-            // const file = input.files[0];
+        $(document).ready(function(){
+            $(document).on('keyup', function(e){
+                e.preventDefault();
+                let search_string = $('#search').val();
+                $.ajax({
+                    url:"{{ route('search') }}",
+                    method:'GET',
+                    data:{search_string:search_string},
+                    dataType:'json',
+                    success:function(res)
+                    {
+                        $('.content').html(res.table_data);
+                        if(res.status=='nothing_found'){
+                            $('.content').html('<span>'+'nothing found'+'</span>');
+                        }
+                    }
+                })
+            });
+        });
 
-            // if (file) {
-            //     const reader = new FileReader();
+        // $(document).ready(function(){
+ 
+        //     fetch_customer_data();
 
-            //     reader.onload = function (e) {
-            //         preview.src = e.target.result;
-            //         preview.classList.remove('hidden');
-            //     };
+        //     function fetch_customer_data(query = '')
+        //     {
+        //         $.ajax({
+        //             url:"{{ route('search') }}",
+        //             method:'GET',
+        //             data:{query:query},
+        //             dataType:'json',
+        //             success:function(data)
+        //             {
+        //                 $('tbody').html(data.table_data);
+        //             }
+        //         })
+        //     }
 
-            //     reader.readAsDataURL(file);
-            // } else {
-            //     preview.src = '';
-            //     preview.classList.add('hidden');
-            // }
-        }
+        //     $(document).on('keyup', '#search', function(){
+        //         var query = $(this).val();
+        //         fetch_customer_data(query);
+        //     });
+        // });
 
     </script>
     <script>

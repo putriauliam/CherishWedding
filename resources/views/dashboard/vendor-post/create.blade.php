@@ -113,7 +113,7 @@
                 </p>
             @enderror
             <div class="mt-2">
-                <img id="image_preview" class="w-52 hidden max-w-full h-auto rounded-lg">
+                <img id="image_preview" class="img-preview w-52  max-w-full h-auto rounded-lg">
             </div>
         </div>
         {{-- profil --}}
@@ -126,7 +126,7 @@
                 </p>
             @enderror
             <div class="mt-2">
-                <img id="profil_preview" class="w-52 hidden max-w-full h-auto rounded-lg">
+                <img id="profil_preview" class="profil-preview w-52  max-w-full h-auto rounded-lg">
             </div>
         </div>
         {{-- email --}}
@@ -400,23 +400,29 @@
 
         
     }
-    // function previewProfil(input) {
-        // const preview = document.getElementById('profil_preview');
-        // const file = input.files[0];
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+    
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
 
-        // if (file) {
-        //     const reader = new FileReader();
-
-        //     reader.onload = function (e) {
-        //         preview.src = e.target.result;
-        //         preview.classList.remove('hidden');
-        //     };
-
-        //     reader.readAsDataURL(file);
-        // } else {
-        //     preview.src = '';
-        //     preview.classList.add('hidden');
-        // }
+    function previewProfil() {
+        const image = document.querySelector('#profil');
+        const imgPreview = document.querySelector('.profil-preview');
+    
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
 
 </script>
 <script>
