@@ -77,7 +77,7 @@ Route::get('/dashboard/cetak', [DashboardController::class, 'cetak']);
 // Route::get('/dataVendor', [DashboardController::class, 'dataVendor']);
 // Route::get('/dataVendor', [DashboardController::class, 'create']);
 Route::get('/dashboard/vendor/checkSlug', [DashboardCategoryController::class, 'checkSlug'])->middleware('auth');
-Route::delete('/dashboard/delete', [DashboardCategoryController::class, 'destroy']);
+Route::delete('/dashboard/delete/{id}', [DashboardCategoryController::class, 'destroy']);
 Route::resource('/dashboard',DashboardController::class)->middleware('auth');
 Route::resource('/dataVendor',DashboardCategoryController::class)->middleware('auth');
 
