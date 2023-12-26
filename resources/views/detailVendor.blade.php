@@ -9,11 +9,11 @@
             <div class="flex">
                 @if($vendor->profil)
                     <div style="overflow: hidden;">
-                        <img src="{{ asset('storage/image/' . $vendor->profil) }}"
+                        <img src="{{ asset('storage/' . $vendor->profil) }}"
                             alt="{{ $vendor->profil }}" class="ml-3 w-16 h-16 rounded-full">
                     </div>
                 @else
-                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                    <img src="{{ asset('storage/image/user.png' ) }}"
                         alt="{{ $vendor->category->name }}" class="ml-3 w-16 h-16 rounded-full">
                 @endif
                 <div class="pl-3">
@@ -73,7 +73,7 @@
         </div>
         @if($vendor->image)
             <div class="overflow-hidden mt-4 h-96" style="width: 877px;">
-                <img src="{{ asset('storage/image/' . $vendor->image) }}"
+                <img src="{{ asset('storage/' . $vendor->image) }}"
                     alt="{{ $vendor->category->name }}"
                     class="img-fluid rounded-lg h-full w-full object-cover" >
             </div>
@@ -96,11 +96,11 @@
             <div class="judulContact flex w-64">
                 @if($vendor->profil)
                     <div style="overflow: hidden;">
-                        <img src="{{ asset('storage/image/' . $vendor->profil) }}"
+                        <img src="{{ asset('storage/' . $vendor->profil) }}"
                             alt="{{ $vendor->profil }}" class="w-8 h-8 rounded-full">
                     </div>
                 @else
-                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                    <img src="{{ asset('storage/image/user.png' ) }}"
                         alt="{{ $vendor->category->name }}" class="w-8 h-8 rounded-full">
                 @endif
                 <h1 class="ml-3"><strong>{{ $vendor->name }}</strong></h1>

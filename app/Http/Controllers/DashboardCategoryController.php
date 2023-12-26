@@ -26,6 +26,8 @@ class DashboardCategoryController extends Controller
             'cities' => City::all(),
 
         ]);
+
+        
     }
 
     /**
@@ -76,47 +78,6 @@ class DashboardCategoryController extends Controller
         Vendor::create($validatedData);
 
         return redirect('/dataVendor')->with('success', 'New post has been added!');
-        // try {
-        //     $validatedData = $request->validate([
-        //         'name' => 'required|max:255',
-        //         'slug' => 'required|unique:vendors',
-        //         'category_id' => 'required',
-        //         'city_id' => 'required',
-        //         'price' => 'required',
-        //         'address' => 'required',
-        //         'koordinat_maps' => 'required',
-        //         'detail' => 'required',
-        //         'telp' => 'required',
-        //         'email' => 'required',
-        //         'instagram' => 'required',
-        //         'image' => 'image|file|max:2048',
-        //         'profil' => 'image|file|max:2048',
-        //     ]);
-    
-        //     if ($request->file('image')) {
-        //         $validatedData['image'] = $request->file('image')->store('image');
-        //     }
-        //     if ($request->file('profil')) {
-        //         $validatedData['profil'] = $request->file('profil')->store('image');
-        //     }
-    
-        //     Vendor::create($validatedData);
-    
-        //     return redirect('/dataVendor')->with('success', 'New post has been added!');
-        // } catch (QueryException $e) {
-        //     // Tangkap kesalahan QueryException
-        //     Log::error('Error creating vendor: ' . $e->getMessage());
-    
-        //     // Redirect kembali ke halaman sebelumnya dengan pesan error
-        //     return redirect('/dataVendor')->with('fail', 'Failed to add new post. Please try again.');
-        // } catch (\Exception $e) {
-        //     Log::error('Kesalahan tak terduga saat membuat vendor: ' . $e->getMessage());
-
-        //     // Tampilkan pesan pengecualian untuk debugging
-        //     dd($e->getMessage());
-
-        //     return redirect('/dataVendor')->with('fail', 'Kesalahan tak terduga terjadi. Silakan coba lagi.');
-        // }
     }
 
     /**
@@ -132,17 +93,63 @@ class DashboardCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Vendor $vendor)
     {
-        //
+        return view('dashboard.vendor-post.edit', [
+            'vendor' => $vendor,
+            'categories' => Category::all(),
+            'cities' => City::all()
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Vendor $vendor)
     {
-        //
+
+        $rules = [
+            'name' => 'required|max:255',
+            'category_id' => 'required',
+            'city_id' => 'required',
+            'price' => 'required',
+            'address' => 'required',
+            'koordinat_maps' => 'required',
+            'detail' => 'required',
+            'telp' => 'required',
+            'email' => 'required',
+            'instagram' => 'required',
+            'image' => 'image|file|max:2048',
+            'profil' => 'image|file|max:2048',
+        ];
+
+        if ($request->slug != $vendor->slug) {
+            $rules['slug'] = 'required|unique:vendors';
+        }
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('image');
+        }
+
+        if ($request->file('profil')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['profil'] = $request->file('profil')->store('image');
+        }
+
+        // $validatedData['user_id'] = auth()->user()->id;
+        // $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        Vendor::where('id', $vendor->id)
+            ->update($validatedData);
+
+        return redirect('/dataVendor')->with('success', 'Vendor berhasil di update!');
     }
 
     /**
@@ -166,4 +173,51 @@ class DashboardCategoryController extends Controller
         $slug = SlugService::createSlug(Vendor::class, 'slug', $request->name);
         return response()->json(['slug' => $slug]);
     }
+
+    public function search(Request $request)
+    {
+        if($request->ajax())
+        {
+            $output = '';
+            $vendor = Vendor::where('name', 'like', '%'.$request->search_string.'%')
+            ->orWhere('detail', 'like', '%'.$request->search_string.'%')
+            ->orderBy('id','desc')
+            ->paginate(10);
+        } else {
+            $vendor = DB::table('vendors')
+                ->orderBy('id', 'desc')
+                ->get();
+        }
+
+        if ($vendor->count() >= 1) {
+            
+            
+                $vendor =  Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString();
+                // $categories = Category::all(),
+                // 'cities' => City::all(),
+                foreach($vendor as $row)
+                {
+                    $output .= '
+                    <tr>
+                    <td>'.$row->name.'</td>
+                    <td>'.$row->image.'</td>
+                    <td>'.$row->city->name.'</td>
+                    <td>'.$row->category->name.'</td>
+                    <td>'.$row->price.'</td>
+                    </tr>
+                    ';
+                }
+    
+        }else{
+            return response()->json([
+                'status' => 'nothing_found',
+            ]);
+        }
+        $vendor = array(
+            'table_data'  => $output,
+        );
+        echo json_encode($vendor);
+        
+    }
+
 }

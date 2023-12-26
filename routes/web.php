@@ -79,7 +79,13 @@ Route::get('/dashboard/cetak', [DashboardController::class, 'cetak']);
 Route::get('/dashboard/vendor/checkSlug', [DashboardCategoryController::class, 'checkSlug'])->middleware('auth');
 Route::delete('/dashboard/delete/{id}', [DashboardCategoryController::class, 'destroy']);
 Route::resource('/dashboard',DashboardController::class)->middleware('auth');
-Route::resource('/dataVendor',DashboardCategoryController::class)->middleware('auth');
+Route::resource('/dataVendor',DashboardCategoryController::class)->parameters([
+    'dataVendor' => 'vendor',
+])->middleware('auth');
+// Route::get('dashboard/detail/{vendor:slug}', [DashboardCategoryController::class, 'edit']);
+// Route::put('dashboard/update/{vendor:slug}', [DashboardCategoryController::class, 'update']);
+Route::get('/search', [DashboardCategoryController::class, 'search'])->name('search');
+
 
 
 

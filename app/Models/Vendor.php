@@ -61,6 +61,11 @@ class Vendor extends Model
         return $this->belongsTo(City::class);
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function sluggable(): array
     {
         return [
