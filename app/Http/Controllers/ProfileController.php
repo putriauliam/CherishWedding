@@ -10,6 +10,8 @@ use App\Models\City;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\ValidationException;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class ProfileController extends Controller
 {
@@ -82,17 +84,45 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Profil $profil)
     {
-        //
+        return view('profil', [
+            'profil' => $profil
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+        try {
+            $user = Auth::user();
+            $rules = [
+                'image' => 'image|file|max:10240|required'
+            ];
+        
+            $validatedData = $request->validate($rules);
+        
+            if ($request->file('image')) {
+                if ($request->oldImage) {
+                    Storage::delete($request->oldImage);
+                }
+                $validatedData['image'] = $request->file('image')->store('image');
+            }
+        
+            $validatedData['password'] = auth()->user()->id;
+        
+            User::where('id', $user->id)->update($validatedData);
+        
+            return redirect('/profil')->with('success', 'Profile has been updated');
+        } catch (ValidationException $e) {
+            // Tangkap kesalahan validasi dan kembalikan dengan pesan kesalahan
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Exception $e) {
+            // Tangkap kesalahan lainnya dan cetak pesan kesalahan
+            dd($e->getMessage());
+        }
     }
 
     /**
