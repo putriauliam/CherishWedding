@@ -21,7 +21,7 @@
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="{{ asset('storage/image/logo.png') }}" class="h-10"
                         alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Cherish Wedding</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900">Cherish Wedding</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -38,17 +38,17 @@
                         class="font-small flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-opacity-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
                             <a href="/"
-                                class="block font-medium border-b-2 border-white-900 text-white active">BERANDA</a>
+                                class="block font-medium border-b-2 border-gray-900 text-gray-900 active">BERANDA</a>
                         </li>
                         <li>
-                            <a href="/vendor" class="block text-white md:hover:font-medium">VENDOR</a>
+                            <a href="/vendor" class="block text-gray-900 md:hover:font-medium">VENDOR</a>
                         </li>
                         <li>
-                            <a href="/tentang" class="block text-white md:hover:font-medium">TENTANG KAMI</a>
+                            <a href="/tentang" class="block text-gray-900 md:hover:font-medium">TENTANG KAMI</a>
                         </li>
                         @Auth
                             <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
-                                class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full md:me-0 text-white"
+                                class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full md:me-0"
                                 type="button">
                                 <span class="sr-only">Open user menu</span>
                                 @if(auth()->user()->image)
@@ -57,7 +57,7 @@
                                             alt="{{ auth()->user()->image }}" class="w-8 h-8 me-2 rounded-full">
                                     </div>
                                 @else
-                                    <img src="{{ asset('storage/image/profil-kosong.jpg' ) }}"
+                                    <img src="{{ asset('storage/image/user.png' ) }}"
                                         alt="{{ auth()->user()->name }}" class="w-8 h-8 me-2 rounded-full">
                                 @endif
                                 {{-- <img class="w-8 h-8 me-2 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
@@ -265,7 +265,7 @@
                                 </div>
                             @endif
                             <div class="ml-3 sm:ml-4">
-                                <p class="text-lg font-medium font-normal dark:text-white">
+                                <p class="text-lg font-normal dark:text-white">
                                     <strong>
                                         {{ $rekomen->name }}
                                     </strong>
@@ -273,9 +273,9 @@
                             </div>
                         </a>
                         <div class="mt-2 mb-4">
-                            <p class="px-4 sm:px-4 flex text-lg font-medium font-normal dark:text-white">
+                            <p class="px-4 sm:px-4 flex text-lg font-normal dark:text-white">
                                 {{ $rekomen->category->name }}</p>
-                            <p class="px-4 sm:px-4 flex text-lg font-medium font-normal dark:text-white">
+                            <p class="px-4 sm:px-4 flex text-lg font-normal dark:text-white">
                                 {{ $rekomen->city->name }}</p>
                         </div>
                     </div>
