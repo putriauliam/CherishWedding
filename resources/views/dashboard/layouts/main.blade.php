@@ -18,6 +18,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <link rel="icon" href="{{ asset('storage/image/logo.png') }}">
         <title>Dashboard</title>
+        @livewireStyles
 </head>
 
     <body>   

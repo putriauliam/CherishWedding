@@ -84,14 +84,8 @@ Route::resource('/dataVendor',DashboardCategoryController::class)->parameters([
 ])->middleware('auth');
 // Route::get('dashboard/detail/{vendor:slug}', [DashboardCategoryController::class, 'edit']);
 // Route::put('dashboard/update/{vendor:slug}', [DashboardCategoryController::class, 'update']);
-Route::get('/search', [DashboardCategoryController::class, 'search'])->name('search');
+// Route::get('/search', [DashboardCategoryController::class, 'search'])->name('search');
 
-
-
-
-// Route::get('/dataVendor', function () {
-//     return view('dashboard.dataVendor');
-// });
 
 Route::get('/trix', [TrixController::class, 'index']);
 Route::get('/upload', [TrixController::class, 'upload']);
@@ -99,3 +93,4 @@ Route::get('/store', [TrixController::class, 'store']);
 
 // profil
 Route::get('/profil/{id}', [ProfileController::class, 'show'])->middleware('auth');
+Route::resource('/profil',ProfileController::class);

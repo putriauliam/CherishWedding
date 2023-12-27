@@ -21,9 +21,9 @@ class DashboardCategoryController extends Controller
     {
         return view('dashboard.vendor-post.index', [
             
-            "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString(),
-            'categories' => Category::all(),
-            'cities' => City::all(),
+            // "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString(),
+            // 'categories' => Category::all(),
+            // 'cities' => City::all(),
 
         ]);
 
