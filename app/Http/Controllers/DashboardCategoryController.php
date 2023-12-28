@@ -9,6 +9,8 @@ use App\Models\City;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Livewire\Attributes\Title;
+
 // use Log;
 
 class DashboardCategoryController extends Controller
@@ -37,6 +39,8 @@ class DashboardCategoryController extends Controller
     public function create()
     {
         return view('dashboard.vendor-post.create', [
+            'title' => "TAMBAH DATA VENDOR",
+            "active" => "data vendor",
             'categories' => Category::all(),
             'cities' => City::all()
         ]);
