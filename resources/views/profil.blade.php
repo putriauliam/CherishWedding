@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="mb-5">
-    <div class="h-32 mb-20" style="background-image: url('https://source.unsplash.com/2080x800/');">
+    <div class="h-32 mb-20 max-w-full" style="background-image: url('https://source.unsplash.com/2090x800/');">
         <div class="h-10">
         </div>
 
@@ -132,7 +132,7 @@
     <div class="namaProfil">
         <h1 class="font-bold text-center text-2xl mb-2">{{ $user->name }}</h1>
         <!-- Follow us -->
-        <div class="flex justify-center">
+        <div class="flex justify-center mb-2">
             <ul class="font-medium flex">
                 <li class="">
                     <div class="flex items-center">
@@ -280,7 +280,7 @@
                             <div class="overflow-hidden">
                                 @if($item->image)
                             <div class="overflow-hidden">
-                                <img src="{{ asset('storage/image/' . $item->image) }}" alt="{{ $item->category->name }}"
+                                <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->category->name }}"
                                     class="p-3 rounded-t-lg h-44 w-44 object-cover">
 
                             </div>
@@ -300,7 +300,7 @@
                                     <div style="overflow: hidden;">
                                         @if($item->profil)
                                     <div style="overflow: hidden;">
-                                        <img src="{{ asset('storage/image/' . $item->profil) }}"
+                                        <img src="{{ asset('storage/' . $item->profil) }}"
                                             alt="{{ $item->profil }}" class="ml-3 mr-2 w-8 h-8 rounded-full justify-between">
                                     </div>
                                 @else
@@ -328,7 +328,7 @@
                         @endforeach
             </div>
             @else
-            <p class="text-center fs-4">Hasil tidak ditemukan.</p>
+            <p class="text-center fs-4">Tidak ada vendor yang disukai</p>
         @endif
     </div>
 

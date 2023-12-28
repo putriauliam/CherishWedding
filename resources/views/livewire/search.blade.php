@@ -1,9 +1,6 @@
 <div>
     <div class="p-4 sm:ml-64">
-        <h1 class="mb-4 text-2xl text-gray-900 dark:text-white font-semibold">
-            <span>DATA VENDOR</span>
-            <hr class="border-b-1 border-black mt-2">
-        </h1>
+        
         <div class="flex justify-between items-center">
             <div>
                 <a href="/dataVendor/create" 
@@ -103,8 +100,9 @@
                                     {{ $v->name }}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{ $v->image }}
+                                    <img src="{{ asset('storage/' . $v->image) }}" class="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch">
                                 </td>
+                                
                                 <td class="px-6 py-4">
                                     {{ $v->city->name }}
                                 </td>
@@ -155,11 +153,11 @@
                 </table>
                     
             </div>
-            <div class="mr-20 mb-5 mt-5">
-                {{-- pagination --}}
-                {{ $vendor->links('vendor.pagination.tailwind') }}
-            </div>
-        <!-- Dropdown menu -->
+            <!-- Dropdown menu -->
+        </div>
+        <div class="mr-20 mb-5 mt-5">
+            {{-- pagination --}}
+            {{ $vendor->links('vendor.pagination.tailwind') }}
         </div>
 </div>
 </div>
