@@ -143,7 +143,7 @@
                             <div class="absolute w-10 h-10 flex items-center justify-center rounded-full">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
-                            <p class="ml-12 mb-0">Detail Alamat</p>
+                            <p class="ml-12 mb-0">{{ $vendor->address }}</p>
                         </div>
                     </li>
                 </ul>

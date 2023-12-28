@@ -20,7 +20,8 @@ class DashboardCategoryController extends Controller
     public function index()
     {
         return view('dashboard.vendor-post.index', [
-            
+            "title" => "DATA VENDOR",
+            "active" => "data vendor",
             // "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString(),
             // 'categories' => Category::all(),
             // 'cities' => City::all(),
@@ -86,6 +87,8 @@ class DashboardCategoryController extends Controller
     public function show(Vendor $vendor)
     {
         return view('dashboard.vendor-post.show',[
+            "title" => "DETAIL DATA VENDOR",
+            "active" => "data vendor",
             'vendor' => $vendor
         ]);
     }
@@ -96,6 +99,8 @@ class DashboardCategoryController extends Controller
     public function edit(Vendor $vendor)
     {
         return view('dashboard.vendor-post.edit', [
+            "title" => "EDIT DATA VENDOR",
+            "active" => "data vendor",
             'vendor' => $vendor,
             'categories' => Category::all(),
             'cities' => City::all()

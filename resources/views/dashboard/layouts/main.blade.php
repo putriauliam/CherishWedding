@@ -17,11 +17,13 @@
         {{-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> --}}
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <link rel="icon" href="{{ asset('storage/image/logo.png') }}">
-        <title>Dashboard</title>
+        <title>Cherish Wedding | {{ $title }}</title>
         @livewireStyles
 </head>
 
     <body>   
+        @include('dashboard.layouts.header')
+
         @include('dashboard.layouts.sidebar')
     
         @yield('container')

@@ -19,10 +19,17 @@ class Search extends Component
     public function render()
     {
         return view('livewire.search',[
-            "vendor" => Vendor::when($this->search, function($q){
+            "vendor" => Vendor::when($this->search, function($q, $search){
                 $q->where('name', 'like', '%' .$this->search. '%')
-                ->orWhere('name', 'like', '%' .$this->search. '%');
-            })->latest()->paginate(10),
+                ->orWhere('name', 'like', '%' .$this->search. '%')
+                ->orWhereHas('category', function ($query) use ($search) {
+                    $query->where('name', 'like', '%' . $search . '%');
+                })
+                ->orWhereHas('city', function ($query) use ($search) {
+                    $query->where('name', 'like', '%' . $search . '%');
+                });
+            })
+            ->latest()->paginate(10),
             // "vendor" => Vendor::latest()->paginate(10)->withQueryString(),
             'categories' => Category::all(),
             'cities' => City::all(),

@@ -26,6 +26,8 @@ class DashboardController extends Controller
     {
         if (Auth::user()->Type == 'admin') {
             return view('dashboard.index', [
+                "title" => "DASHBOARD",
+                "active" => "dashboard",
                 "vendor" => Vendor::latest()->filter(request(['search', 'category', 'city']))->paginate(10)->withQueryString(),
                 "mua" => Vendor::where('category_id', '=', '1')->count(),
                 "foto" => Vendor::where('category_id', '=', '2')->count(),

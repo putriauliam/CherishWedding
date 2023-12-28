@@ -3,10 +3,7 @@
 @section('container')
 
 <div class="p-4 sm:ml-64">
-    <h1 class="mb-4 text-2xl text-gray-900 dark:text-white font-semibold">
-        <span>EDIT DATA VENDOR</span>
-        <hr class="border-b-1 border-black mt-2">
-    </h1>
+    
 
     <form class="w-sm mx-auto" method="post" action="/dataVendor/{{ $vendor->slug }}" enctype="multipart/form-data">
         @method('put')
