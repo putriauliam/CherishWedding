@@ -48,32 +48,32 @@
         <div class="flex flex-col items-center justify-center">
             <img src="{{ asset('storage/image/mitra.png') }}" alt="mitra" class="w-20 h-20" />
             <dt class="mb-2 text-3xl font-extrabold">{{ $totalVendor }}</dt>
-            <dd class="text-gray-500 dark:text-gray-400">Mitra Vendor</dd>
+            <dd class="text-gray-700 dark:text-gray-400">Mitra Vendor</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
             <img src="{{ asset('storage/image/fotografer2.png') }}" alt="fotografer" class="w-20 h-20" />
             <dt class="mb-2 text-3xl font-extrabold">{{ $foto }}</dt>
-            <dd class="text-gray-500 dark:text-gray-400">Fotografer</dd>
+            <dd class="text-gray-700 dark:text-gray-400">Fotografer</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
             <img src="{{ asset('storage/image/catering.png') }}" alt="katering" class="w-20 h-20" />
             <dt class="mb-2 text-3xl font-extrabold">{{ $katering }}</dt>
-            <dd class="text-gray-500 dark:text-gray-400">Katering</dd>
+            <dd class="text-gray-700 dark:text-gray-400">Katering</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
              <img src="{{ asset('storage/image/makeup.png') }}" alt="mua" class="w-20 h-20" />
             <dt class="mb-2 text-3xl font-extrabold">{{ $mua }}</dt>
-            <dd class="text-gray-500 dark:text-gray-400">MUA</dd>
+            <dd class="text-gray-700 dark:text-gray-400">MUA</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
              <img src="{{ asset('storage/image/wedding.png') }}" alt="venue" class="w-20 h-20" />
             <dt class="mb-2 text-3xl font-extrabold">{{ $venue }}</dt>
-            <dd class="text-gray-500 dark:text-gray-400">Venue</dd>
+            <dd class="text-gray-700 dark:text-gray-400">Venue</dd>
         </div>
         <div class="flex flex-col items-center justify-center">
              <img src="{{ asset('storage/image/pasangan.png') }}" alt="pasangan" class="w-20 h-20 mr-4" />
             <dt class="mb-2 text-3xl font-extrabold">90+</dt>
-            <dd class="text-gray-500 dark:text-gray-400">Pasangan</dd>
+            <dd class="text-gray-700 dark:text-gray-400">Pasangan</dd>
         </div>
     </dl>
 </div>

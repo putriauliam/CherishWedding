@@ -4,7 +4,7 @@
 <div class="p-4 sm:ml-64">
     
 
-    <form class="w-sm mx-auto" method="post" action="#" enctype="multipart/form-data">
+    <form class="w-sm mx-auto" method="post" action="#" enctype="multipart/form-data" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         {{-- nama --}}
         <div class="mb-2">
             <label for="name" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Nama
@@ -117,8 +117,8 @@
                 <h1>{!! $vendor->detail !!}</h1>
             </div>
         </div>
-        <div class="flex justify-center">
-            <a href="/dataVendor" type="submit" class="text-center w-52 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 mt-3 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
+        <div class="flex justify-center" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+            <a href="/dataVendor" type="submit" class="text-center w-52 text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-400 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 mt-3 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
         </div>
     </form>
 
