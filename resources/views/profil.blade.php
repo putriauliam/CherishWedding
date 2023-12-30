@@ -28,7 +28,7 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-28 bottom-28 right-64 left-64 z-50 w-full md:max-w-[calc(100%-2rem)] max-h-full ">
+            <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-28 bottom-28 right-64 left-64 z-50 w-full md:max-w-[calc(100%-2rem)] max-h-full " style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
                 <div class="relative p-4 w-max max-h-full ml-[400px] mt-[100px]">
                     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                         <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
@@ -60,7 +60,7 @@
             </div>
 
             <!-- Main modal -->
-<div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full" >
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -129,7 +129,7 @@
         </div>
     </div>
     
-    <div class="namaProfil">
+    <div class="namaProfil" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <h1 class="font-bold text-center text-2xl mb-2">{{ $user->name }}</h1>
         <!-- Follow us -->
         <div class="flex justify-center mb-2">
@@ -165,7 +165,7 @@
 <hr class="border-t-2 border-gray-500">
 <div class="flex mt-8">
     <!-- filter -->
-    <div class="filter ml-5 mr-5">
+    <div class="filter ml-5 mr-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <div
             class="w-72 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <div class="flex items-center justify-between">
@@ -220,7 +220,7 @@
 
     
     <!-- card -->
-    <div class="">
+    <div class="" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900"> Disukai<i class="ml-2 fa-brands fa-gratipay"></i></h5>
         {{-- allert --}} 
             @if(session()->has('success'))

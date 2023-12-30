@@ -5,7 +5,7 @@
     
 
   <!-- Cards -->
-    <div class="p-4 sm:ml-64">
+    <div class="p-4 sm:ml-64" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <h1 class="mb-15 text-2xl font-semibold">Kategori</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-5">
             <a href="#"
