@@ -162,7 +162,7 @@
         </div>
     </div>
 </div>
-<hr class="border-t-2 border-gray-500">
+<hr class="border-t-2 border-gray-500 ">
 <div class="flex mt-8">
     <!-- filter -->
     <div class="filter ml-5 mr-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">

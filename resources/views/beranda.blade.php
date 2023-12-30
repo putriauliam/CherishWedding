@@ -234,11 +234,11 @@
             <!-- Kartu 1 -->
             @foreach($rekomendasi as $rekomen)
                 <div
-                    class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+                    class="max-w-xs sm:max-w-sm bg-red-200 border  rounded-lg shadow dark:bg-red-200 dark:border-gray-700 relative">
                     <!-- Konten Kartu 1 -->
                     <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
                     <div
-                        class="max-w-xs sm:max-w-sm bg-red-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+                        class="max-w-xs sm:max-w-sm bg-red-200 border  rounded-lg shadow dark:bg-red-200 dark:border-gray-700 relative">
                         <!-- Konten Kartu -->
 
                         <a href="/detail/{{ $rekomen->slug }}">

@@ -21,7 +21,7 @@
         @livewireStyles
 </head>
 
-    <body>   
+    <body class="pr-6 pl-5">   
         @include('dashboard.layouts.header')
 
         @include('dashboard.layouts.sidebar')

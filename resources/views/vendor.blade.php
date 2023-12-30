@@ -1,11 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-{{-- <h1 class="mb-3 text-center">{{ $title }}</h1> --}}
 
-
-
-<!-- searchbar -->
 
 <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
     @if(session()->has('success'))
@@ -82,7 +78,7 @@
     <!-- filter -->
     <div class="filter ml-5 mr-5">
         <div
-            class="w-72 block max-w-sm p-6 bg-red-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            class="w-72 block max-w-sm p-6 bg-red-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <div class="flex items-center justify-between">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">FILTER</h5>
                 <i class="fa-solid fa-filter" style="color: #fe5d51;"></i>

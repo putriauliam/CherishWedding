@@ -1,4 +1,4 @@
-<div class="p-4 sm:ml-64 flex justify-between items-center relative" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+<div class="p-6  sm:ml-64 flex justify-between items-center relative " style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <h1 class=" text-2xl text-gray-900 dark:text-white font-semibold">
         <span>{{ $title }}</span>
     </h1>
@@ -9,5 +9,6 @@
             <i class="fas fa-sign-out-alt ml-2"></i>
         </button>
     </form>
-<hr class="border-b-1 border-black absolute bottom-2 w-full mt-2">
+<hr class="border-b-1 border-black absolute bottom-2 w-full pr-4 mt-2 ">
+
 </div>
