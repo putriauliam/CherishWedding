@@ -42,7 +42,7 @@
 </div>
 
 {{-- Statistik --}}
-<div class="p-2 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+<div class="p-2 bg-red-200  md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <h1 class="text-5xl font-bold mt-8 mb-4 text-center">Statistik</h1>
     <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
         <div class="flex flex-col items-center justify-center">

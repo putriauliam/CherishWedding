@@ -21,11 +21,11 @@
                     alt="{{ $user->name }}" class="h-40 w-40 rounded-full ">
             @endif
 
-                <div class="absolute bottom-2 right-2">
+                {{-- <div class="absolute bottom-2 right-2">
                     <button id="editButton" class="bg-gray-200 p-1 rounded-full">
                         <i class="fas fa-edit text-gray-600 fa-lg"></i>
                     </button>
-                </div>
+                </div> --}}
             </div>
             <!-- Modal -->
             <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-28 bottom-28 right-64 left-64 z-50 w-full md:max-w-[calc(100%-2rem)] max-h-full " style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
