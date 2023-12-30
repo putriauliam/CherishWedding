@@ -14,14 +14,13 @@
 <body>
 
     <!-- navbar -->
-    <section class="bg-center bg-no-repeat bg-blend-multiply"
-        style="background-image: url('{{ asset('storage/image/wedding1.jpg') }}')">
+    <section class="bg-center bg-no-repeat bg-blend-multiply" style="background-image: url('{{ asset('storage/image/wedding1.jpg') }}') ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
         <nav class="bg-opacity-50 border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="{{ asset('storage/image/logo.png') }}" class="h-10"
                         alt="Flowbite Logo" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900">Cherish Wedding</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-700">Cherish Wedding</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -115,16 +114,16 @@
             </div>
         </nav>
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-red-900 md:text-5xl lg:text-6xl">
                 Cherish Wedding</h1>
-            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan
+            <p class="mb-8 text-lg font-normal text-red-900 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan
                 pengalaman penuh perhatian dan profesionalisme serta memudahkan perencanaan pernikahan anda.</p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             </div>
         </div>
     </section>
 
-    <section class="text-center bg-white py-10">
+    <section class="text-center bg-white py-10" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <h2 class="text-3xl font-semibold mb-20 mt-30">Kategori</h2>
         <div class="flex justify-center">
             <div class="grid grid-cols-2 lg:grid-cols-2 gap-4 max-w-3xl">
@@ -183,15 +182,15 @@
     </section>
 
 
-    <section class="text-center bg-gray-100 py-10">
+    <section class="text-center bg-red-200 py-10">
 
-        <h2 class="text-3xl font-semibold mb-20 mt-10">Kenapa Harus Memilih Kami?</h2>
+        <h2 class="text-3xl font-semibold mb-20 mt-10" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Kenapa Harus Memilih Kami?</h2>
 
-        <div class="flex flex-col lg:flex-row items-center justify-center mt-8 ml-10">
+        <div class="flex flex-col lg:flex-row items-center justify-center mt-8 ml-10" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
             <div class="w-full lg:w-1/2 lg:order-last lg:text-left items-center ml-[95px]">
                 <div class="max-w-md mt-5">
                     <h2 class="text-3xl font-semibold mb-2 text-center">Vendor Pernikahan Terlengkap</h2>
-                    <p class="text-justify mt-6">
+                    <p class="text-justify mt-6" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
                         Cherish Wedding adalah pilihan yang sempurna untuk memenuhi segala kebutuhan pernikahan anda,
                         menghadirkan pengalaman yang tak terlupakan dan sesuai dengan impian anda. Berikut adalah
                         beberapa alasan mengapa anda harus memilih Cherish Wedding untuk mencari venue, fotografer,
@@ -228,8 +227,8 @@
 
 
 
-    <section class="text-center bg-white py-10 mt-4 ">
-        <h2 class="text-3xl font-semibold mb-20 mt-10">Rekomendasi Untuk Anda</h2>
+    <section class="text-center bg-white py-10 mt-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+        <h2 class="text-3xl font-semibold mb-20 mt-10" >Rekomendasi Untuk Anda</h2>
         <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center">
             <!-- Kartu 1 -->
@@ -239,7 +238,7 @@
                     <!-- Konten Kartu 1 -->
                     <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
                     <div
-                        class="max-w-xs sm:max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+                        class="max-w-xs sm:max-w-sm bg-red-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
                         <!-- Konten Kartu -->
 
                         <a href="/detail/{{ $rekomen->slug }}">
@@ -295,11 +294,11 @@
     </section>
 
 
-    <div class="footer bg-gray-100 dark:bg-gray-900">
+    <div class="footer bg-red-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <div class="flex justify-between p-12">
             <!-- Resources -->
             <div class="justify-items-start">
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <ul class="text-white dark:text-gray-400 font-medium">
                     <li class="mb-2">
                         <a href="#" class="flex items-center">
                             <img src="{{ asset('storage/image/logo.png') }}" class="h-8 me-3"
@@ -322,7 +321,7 @@
                                 class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <p class="ml-12 mb-0">Jl. Dr. Setiabudi No. 193 Bandung</p>
+                            <p class="ml-12 mb-0 text-white">Jl. Dr. Setiabudi No. 193 Bandung</p>
                         </div>
                     </li>
                     <li class="mb-4 flex items-center">
@@ -331,7 +330,7 @@
                                 class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
-                            <p class="ml-12 mb-0">+62. 5555.5555.5555</p>
+                            <p class="ml-12 mb-0 text-white">+62. 5555.5555.5555</p>
                         </div>
                     </li>
                     <li class="mb-4 flex items-center">
@@ -340,18 +339,18 @@
                                 class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
-                            <p class="ml-12 mb-0">Cherishwedding@gmail.com</p>
+                            <p class="ml-12 mb-0 text-white">Cherishwedding@gmail.com</p>
                         </div>
                     </li>
                 </ul>
             </div>
             <!-- Navbar -->
             <div class="text-center">
-                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white"><a
+                <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white"><a
                         href="/">Beranda</a></h2>
-                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white"><a
+                <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white"><a
                         href="/vendor">Vendor</a></h2>
-                <h2 class="mb-3 font-normal text-gray-900 uppercase font-semibold dark:text-white"><a
+                <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white"><a
                         href="/tentang">Tentang Kami</a></h2>
             </div>
         </div>

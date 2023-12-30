@@ -2,7 +2,7 @@
 
 @section('container')
 
-<div class="flex justify-center mt-11 ">
+<div class="flex justify-center mt-11 " style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <!-- title -->
     <div class=" flex flex-col vendorPreview  max-w-4xl mr-12 ml-20">
         <div class="title flex justify-between">
@@ -92,7 +92,7 @@
     
     <!-- contactInfo -->
     <div class="detailContact m-5 ">
-        <div href="#" class=" p-6 bg-white border border-gray-200 rounded-lg shadow">
+        <div href="#" class=" p-6 bg-red-200 border border-gray-200 rounded-lg shadow">
             <div class="judulContact flex w-64">
                 @if($vendor->profil)
                     <div style="overflow: hidden;">

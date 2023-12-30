@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="flex">
+<div class="flex" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <div class="text-black mt-24 max-w-xl px-14 ">
         <h1 class="text-6xl font-semibold mb-4">Kisah Kami</h1>
         <p class="text-justify"> Dorongan kami dalam menciptakan Cherish Wedding berasal dari keinginan untuk membantu pasangan merencanakan pernikahan mereka dengan lebih lancar, kreatif, dan tanpa tekanan. Dari sinilah lahir sebuah platform yang menghubungkan pasangan dengan vendor-vendor terbaik, sambil tetap mempertahankan fokus pada keindahan, kreativitas, dan kepuasan pelanggan.</p>
@@ -13,7 +13,7 @@
 </div>
 
 {{-- Profil --}}
-<div class="mt-24 text-center py-4 ">
+<div class="mt-24 text-center py-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <div>
         <h1 class="text-5xl font-bold mb-12">Profil Kami</h1>
         <div class="flex justify-between max-w-lg mx-auto grid grid-cols-2 gap-x-32">
@@ -42,7 +42,7 @@
 </div>
 
 {{-- Statistik --}}
-<div class="p-2 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+<div class="p-2 bg-red-200 rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <h1 class="text-5xl font-bold mt-8 mb-4 text-center">Statistik</h1>
     <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
         <div class="flex flex-col items-center justify-center">
@@ -79,7 +79,7 @@
 </div>
 
 {{-- Ulasan --}}
-<div class="p-10">
+<div class="p-10" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <h1 class="text-5xl font-bold mb-12 text-center">Apa Kata Mereka?</h1>
     <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
         <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
