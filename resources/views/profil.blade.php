@@ -167,14 +167,14 @@
     <!-- filter -->
     <div class="filter ml-5 mr-5" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <div
-            class="w-72 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            class="w-72 block max-w-sm p-6 bg-red-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <div class="flex items-center justify-between">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">FILTER</h5>
-                <i class="fa-solid fa-filter" style="color: #c2c2c2;"></i>
+                <i class="fa-solid fa-filter" style="color: #fe5d51;"></i>
 
             </div>
             <!-- garis -->
-            <hr class="font-medium border-b-2 border-gray-900 my-5">
+
             <form action="/profil/{{ $user->id }}" method="GET">
                 <div class="flex flex-col ">
                     <!-- filter check -->
@@ -211,7 +211,7 @@
                     </div>
                     <!-- button -->
                     <button type="submit"
-                        class="mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">TERAPKAN</button>
+                        class="mt-5 text-gray-900 bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">TERAPKAN</button>
                 </div>
             </form>
         </div>

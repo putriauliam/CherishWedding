@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <a href="/dashboard"
-                        class="mt-10 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ $active === 'dashboard' ? 'bg-gray-100' : '' }}">
+                        class="mt-10 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group {{ $active === 'dashboard' ? 'bg-white' : '' }}">
                         <svg class="flex-shrink-0 w-5 h-5 text-gray-700 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white {{ $active === 'dashboard' ? 'text-gray-900' : '' }}"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 18 18">
@@ -38,7 +38,7 @@
                 </li>
                 <li>
                     <a href="/dataVendor"
-                        class="mt-5 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ $active === 'data vendor' ? 'bg-gray-100' : '' }}">
+                        class="mt-5 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group {{ $active === 'data vendor' ? 'bg-white' : '' }}">
                         <svg class="flex-shrink-0 w-5 h-5 text-gray-700 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white {{ $active === 'data vendor' ? 'text-gray-900' : '' }}"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 20 20">
