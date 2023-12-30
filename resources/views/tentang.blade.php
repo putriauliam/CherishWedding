@@ -7,7 +7,7 @@
         <p class="text-justify"> Dorongan kami dalam menciptakan Cherish Wedding berasal dari keinginan untuk membantu pasangan merencanakan pernikahan mereka dengan lebih lancar, kreatif, dan tanpa tekanan. Dari sinilah lahir sebuah platform yang menghubungkan pasangan dengan vendor-vendor terbaik, sambil tetap mempertahankan fokus pada keindahan, kreativitas, dan kepuasan pelanggan.</p>
     </div>
 
-    <div class="xl:w-1/2 xl:absolute top-24 right-12">
+    <div class="xl:w-1/2 xl:absolute top-24 right-4">
         <img src="{{ asset('storage/image/team.png') }}" class="max-w-full h-auto">
     </div>   
 </div>
@@ -18,22 +18,22 @@
         <h1 class="text-5xl font-bold mb-12">Profil Kami</h1>
         <div class="flex justify-between max-w-lg mx-auto grid grid-cols-2 gap-x-32">
             <div class="mb-3">
-                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/putri.png') }}">
+                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/putri2.jpeg') }}">
                 <h5 class="text-xl font-medium text-gray-900 dark:text-white">Putri Aulia Maulidina</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400 ">Direktur Utama</span>
             </div>
             <div class="mb-3">
-                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/putri.png') }}">
+                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/rahma.jpeg') }}">
                 <h5 class="text-xl font-medium text-gray-900 dark:text-white">Rahma Aliaputri E</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400 ">Direktur Keuangan</span>
             </div>
             <div class="mb-3">
-                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/putri.png') }}">
+                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/hafizh.jpeg') }}">
                 <h5 class="text-xl font-medium text-gray-900 dark:text-white">Hafizh Faiz F</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400">Direktur SDM</span>
             </div>
             <div class="mb-3">
-                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/putri.png') }}">
+                <img class="h-auto max-w-full rounded-lg shadow-xl dark:shadow-gray-600 mb-2" src="{{ asset('storage/image/lita.jpeg') }}">
                 <h5 class="text-xl font-medium text-gray-900 dark:text-white">Lita Yusdia Fatimah</h5>
                 <span class="text-sm text-gray-500 dark:text-gray-400">Direktur Teknologi dan Inovasi</span>
             </div>
