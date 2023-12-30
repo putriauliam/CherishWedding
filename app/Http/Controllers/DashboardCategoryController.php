@@ -62,7 +62,7 @@ class DashboardCategoryController extends Controller
             'koordinat_maps' => 'required',
             'detail' => 'required',
             'telp' => 'required',
-            'email' => 'required',
+            'email' => 'required|unique:vendors',
             'instagram' => 'required',
             'image' => 'image|file|max:2048|required',
             'profil' => 'image|file|max:2048',
@@ -82,7 +82,7 @@ class DashboardCategoryController extends Controller
 
         Vendor::create($validatedData);
 
-        return redirect('/dataVendor')->with('success', 'New post has been added!');
+        return redirect('/dataVendor')->with('success', 'vendor berhasil ditambahkan');
     }
 
     /**
