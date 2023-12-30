@@ -119,7 +119,7 @@
                     </div>
                     <!-- button -->
                     <button type="submit"
-                        class="mt-5 text-gray-900 bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">TERAPKAN</button>
+                        class="mt-5 font-semibold text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-white hover:text-black focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">TERAPKAN</button>
                 </div>
             </form>
         </div>
@@ -131,7 +131,7 @@
         <h5 class="mb-2 ml-4 text-2xl font-bold tracking-tight text-gray-900">{{ $bigtitle }}</h5>
 
         @if($vendor->count())
-            <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap">
+            <div class="flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap">
                 @foreach($vendor as $v)
                 <!-- SubCard -->
                     <div class="card w-44 bg-gray-300  mb-3 mr-2 relative block">

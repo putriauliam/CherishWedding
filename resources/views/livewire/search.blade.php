@@ -4,7 +4,7 @@
         <div class="flex justify-between items-center" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <div class="flex space-x-4">
             <a href="/dataVendor/create" 
-            class="flex items-center text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-500 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            class="flex items-center text-white bg-red-400 border border-gray-300 focus:outline-none font-semibold hover:bg-white hover:text-black focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             type="button">
                 <span class="flex items-center justify-center mr-2">
                     <!-- Icon Tambah -->
@@ -17,7 +17,7 @@
             
             <!-- Cetak Data Vendor -->
             <a href="/dashboard/cetak" target="_blank"
-            class="flex items-center text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-500 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            class="flex items-center text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-white hover:text-black font-semibold  focus:ring-4 focus:ring-gray-200 rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             type="button">
                 <span class="flex items-center justify-center mr-2">
                     <!-- Icon Print -->

@@ -37,25 +37,6 @@
     <div class="p-4 sm:ml-64">
         <div class="flex justify-between items-center">
             <div>
-                <!-- Tambah Data Vendor -->
-                <button data-modal-target="default-modal" data-modal-toggle="default-modal"
-                class="flex items-center justify-center text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                type="button">
-                <span class="mr-2">Tambah Data Vendor</span>
-                <span class="flex items-center justify-center">
-                    <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z"/>
-                    </svg>
-                </span>
-            </button>
-
-                <!-- Cetak Data Vendor -->
-                <a href="/dashboard/cetak" target="_blank"
-                class="text-gray-900 bg-white border border-red-500 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                type="button">
-                Cetak Data Vendor
-                </a>
-            </div>
             <!-- live search -->
             <form action="/vendor">
                     <i class="absolute mt-3 ms-3 mr-4 fa-solid fa-magnifying-glass"></i>
