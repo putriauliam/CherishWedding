@@ -85,7 +85,6 @@
 
             </div>
             <!-- garis -->
-            <hr class="font-medium border-b-2 border-gray-900 my-5">
             <form action="/vendor" method="GET">
                 <div class="flex flex-col ">
                     <!-- filter check -->
@@ -135,7 +134,7 @@
             <div class="flex flex-row mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex flex-wrap">
                 @foreach($vendor as $v)
                 <!-- SubCard -->
-                    <div class="card w-44 bg-red-200  mb-3 mr-2 relative block">
+                    <div class="card w-44 bg-gray-300  mb-3 mr-2 relative block">
                         <form action="/favorites/add" method="POST">
                             @csrf
                             <input type="hidden" name="vendor_id" id="favorit" value="{{ $v->id }}">

@@ -1,8 +1,8 @@
-<div class="footer bg-red-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+<div class="footer mt-12 bg-gray-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
     <div class="flex justify-between p-12">
         <!-- Resources -->
         <div class="justify-items-start">
-            <ul class="text-white dark:text-gray-400 font-medium">
+            <ul class="text-grey-800 dark:text-gray-400 font-medium">
                 <li class="mb-2">
                     <a href="#" class="flex items-center">
                         <img src="{{ asset('storage/image/logo.png') }}" class="h-8 me-3" alt="FlowBite Logo" />
@@ -24,7 +24,7 @@
                             class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <p class="ml-12 mb-0 text-white">Jl. Dr. Setiabudi No. 193 Bandung</p>
+                        <p class="ml-12 mb-0 mt-2">Jl. Dr. Setiabudi No. 193 Bandung</p>
                     </div>
                 </li>
                 <li class="mb-4 flex items-center">
@@ -33,7 +33,7 @@
                             class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                             <i class="fa-brands fa-whatsapp"></i>
                         </div>
-                        <p class="ml-12 mb-0 text-white">+62. 5555.5555.5555</p>
+                        <p class="ml-12 mb-0 mt-2">+62. 5555.5555.5555</p>
                     </div>
                 </li>
                 <li class="mb-4 flex items-center">
@@ -42,16 +42,16 @@
                             class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
-                        <p class="ml-12 mb-0 text-white">Cherishwedding@gmail.com</p>
+                        <p class="ml-12 mb-0 mt-2">Cherishwedding@gmail.com</p>
                     </div>
                 </li>
             </ul>
         </div>
         <!-- Navbar -->
         <div class="text-center">
-            <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white" ><a href="/">Beranda</a></h2>
-            <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white" ><a href="/vendor">Vendor</a></h2>
-            <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white" ><a href="/tentang">Tentang Kami</a></h2>
+            <h2 class="mb-3 font-normal uppercase font-semibold dark:text-white" ><a href="/">Beranda</a></h2>
+            <h2 class="mb-3 font-normal uppercase font-semibold dark:text-white" ><a href="/vendor">Vendor</a></h2>
+            <h2 class="mb-3 font-normal uppercase font-semibold dark:text-white" ><a href="/tentang">Tentang Kami</a></h2>
         </div>
     </div>
 </div>

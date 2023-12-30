@@ -114,9 +114,9 @@
             </div>
         </nav>
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-red-900 md:text-5xl lg:text-6xl">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-800 md:text-5xl lg:text-6xl">
                 Cherish Wedding</h1>
-            <p class="mb-8 text-lg font-normal text-red-900 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan
+            <p class="mb-8 text-lg font-normal text-gray-600 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan
                 pengalaman penuh perhatian dan profesionalisme serta memudahkan perencanaan pernikahan anda.</p>
             <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             </div>
@@ -160,18 +160,18 @@
                         </a>
                         <a href="/vendor?category%5B%5D=3">
                             <img class="p-8 rounded-t-lg"
-                                src="{{ asset('storage/image/venue2.jpg') }}" alt="venue image" />
+                                src="{{ asset('storage/image/venue3.png') }}" alt="venue image" />
                         </a>
                     </div>
                 </div>
                 <div class="bg-white col-span-1 row-span-1">
                     <div class="px-5 pb-5">
                         <a href="/vendor?category%5B%5D=4">
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Catering</h5>
+                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Katering</h5>
                         </a>
                         <a href="/vendor?category%5B%5D=4">
                             <img class="p-8 rounded-t-lg"
-                                src="{{ asset('storage/image/CateringNew.png') }}"
+                                src="{{ asset('storage/image/foodie.png') }}"
                                 alt="catering image" />
                         </a>
                     </div>
@@ -238,7 +238,8 @@
                     <!-- Konten Kartu 1 -->
                     <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
                     <div
-                        class="max-w-xs sm:max-w-sm bg-red-200 border  rounded-lg shadow dark:bg-red-200 dark:border-gray-700 relative">
+                        class="max-w-xs sm:max-w-sm bg-gray-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+
                         <!-- Konten Kartu -->
 
                         <a href="/detail/{{ $rekomen->slug }}">
@@ -294,11 +295,11 @@
     </section>
 
 
-    <div class="footer bg-red-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <div class="footer bg-gray-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <div class="flex justify-between p-12">
             <!-- Resources -->
             <div class="justify-items-start">
-                <ul class="text-white dark:text-gray-400 font-medium">
+                <ul class="dark:text-gray-400 font-medium">
                     <li class="mb-2">
                         <a href="#" class="flex items-center">
                             <img src="{{ asset('storage/image/logo.png') }}" class="h-8 me-3"
@@ -321,7 +322,7 @@
                                 class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <p class="ml-12 mb-0 text-white">Jl. Dr. Setiabudi No. 193 Bandung</p>
+                            <p class="ml-12 mb-0 mt-2">Jl. Dr. Setiabudi No. 193 Bandung</p>
                         </div>
                     </li>
                     <li class="mb-4 flex items-center">
@@ -330,7 +331,7 @@
                                 class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
-                            <p class="ml-12 mb-0 text-white">+62. 5555.5555.5555</p>
+                            <p class="ml-12 mb-0 mt-2">+62. 5555.5555.5555</p>
                         </div>
                     </li>
                     <li class="mb-4 flex items-center">
@@ -339,18 +340,18 @@
                                 class="absolute w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
-                            <p class="ml-12 mb-0 text-white">Cherishwedding@gmail.com</p>
+                            <p class="ml-12 mb-0 mt-2">Cherishwedding@gmail.com</p>
                         </div>
                     </li>
                 </ul>
             </div>
             <!-- Navbar -->
             <div class="text-center">
-                <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white"><a
+                <h2 class="mb-3 font-normal uppercase font-semibold dark:text-white"><a
                         href="/">Beranda</a></h2>
-                <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white"><a
+                <h2 class="mb-3 font-normal uppercase font-semibold dark:text-white"><a
                         href="/vendor">Vendor</a></h2>
-                <h2 class="mb-3 font-normal text-white uppercase font-semibold dark:text-white"><a
+                <h2 class="mb-3 font-normal uppercase font-semibold dark:text-white"><a
                         href="/tentang">Tentang Kami</a></h2>
             </div>
         </div>
