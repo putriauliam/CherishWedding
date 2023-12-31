@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="flex" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-    <div class="text-black mt-24 max-w-xl px-14 ">
+<div class="flex justify-center items-center p-16" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <div class="text-black max-w-xl ">
         <h1 class="text-6xl font-semibold mb-4">Kisah Kami</h1>
         <p class="text-justify"> Dorongan kami dalam menciptakan Cherish Wedding berasal dari keinginan untuk membantu pasangan merencanakan pernikahan mereka dengan lebih lancar, kreatif, dan tanpa tekanan. Dari sinilah lahir sebuah platform yang menghubungkan pasangan dengan vendor-vendor terbaik, sambil tetap mempertahankan fokus pada keindahan, kreativitas, dan kepuasan pelanggan.</p>
     </div>
 
-    <div class="xl:w-1/2 xl:absolute top-24 right-4">
+    <div class="ml-10">
         <img src="{{ asset('storage/image/team.png') }}" class="max-w-full h-auto">
     </div>   
 </div>

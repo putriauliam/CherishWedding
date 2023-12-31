@@ -14,7 +14,7 @@
 <body>
 
     <!-- navbar -->
-    <section class="bg-center bg-no-repeat bg-blend-multiply" style="background-image: url('{{ asset('storage/image/wedding1.jpg') }}') ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    <section class="bg-center bg-no-repeat bg-blend-multiply" style="background-image: url('{{ asset('storage/image/CherishBanner.png') }}') ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
         <nav class="bg-opacity-50 border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -114,7 +114,7 @@
             </div>
         </nav>
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-800 md:text-5xl lg:text-6xl">
+            <h1 style="color:#FF5780" class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
                 Cherish Wedding</h1>
             <p class="mb-8 text-lg font-normal text-gray-600 lg:text-xl sm:px-16 lg:px-48"> Layanan yang menyediakan
                 pengalaman penuh perhatian dan profesionalisme serta memudahkan perencanaan pernikahan anda.</p>
@@ -186,8 +186,12 @@
 
         <h2 class="text-3xl font-semibold mb-20 mt-10" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Kenapa Harus Memilih Kami?</h2>
 
-        <div class="flex flex-col lg:flex-row items-center justify-center mt-8 ml-10" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-            <div class="w-full lg:w-1/2 lg:order-last lg:text-left items-center ml-[95px]">
+        <div class="flex items-center justify-start mt-8 " style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+            <div class="mr-10 w-1/2 lg:w-1/2 lg:order-first flex justify-end items-center ">
+                <img src="{{ asset('storage/image/venue.jpg') }}" alt="Cherish Wedding"
+                    class="w-80 h-auto rounded-tl-full rounded-tr-full shadow-lg mt-5">
+            </div>
+            <div class="flex mr-40 lg:w-1/2 lg:order-last lg:text-left items-center">
                 <div class="max-w-md mt-5">
                     <h2 class="text-3xl font-semibold mb-2 text-center">Vendor Pernikahan Terlengkap</h2>
                     <p class="text-justify mt-6" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
@@ -218,23 +222,19 @@
                     <!-- Akhir dari tambahan ikon-ikon -->
                 </div>
             </div>
-            <div class="w-1/2 lg:w-1/2 lg:order-first   items-center ml-[200px]">
-                <img src="{{ asset('storage/image/venue.jpg') }}" alt="Cherish Wedding"
-                    class="w-80 h-auto rounded-tl-full rounded-tr-full shadow-lg mt-5">
-            </div>
         </div>
     </section>
 
 
 
-    <section class="text-center bg-white py-10 mt-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <section class="block text-center bg-white py-10 mt-4 mb-20" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <h2 class="text-3xl font-semibold mb-20 mt-10" >Rekomendasi Untuk Anda</h2>
         <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-items-center">
             <!-- Kartu 1 -->
             @foreach($rekomendasi as $rekomen)
                 <div
-                    class="max-w-xs sm:max-w-sm bg-red-200 border  rounded-lg shadow dark:bg-red-200 dark:border-gray-700 relative">
+                    class="max-w-xs sm:max-w-sm border  rounded-lg shadow dark:bg-red-200 dark:border-gray-700 relative">
                     <!-- Konten Kartu 1 -->
                     <!-- ... (Isi konten kartu sesuai dengan yang ada) ... -->
                     <div
@@ -245,7 +245,7 @@
                         <a href="/detail/{{ $rekomen->slug }}">
                             @if($rekomen->image)
                                 <img src="{{ asset('storage/' . $rekomen->image) }}"
-                                    alt="{{ $rekomen->category->name }}" class="p-4 sm:p-8 rounded-t-lg">
+                                    alt="{{ $rekomen->category->name }}" class="p-2 w-72 h-72 sm:p-4 rounded-t-lg object-cover">
                             @else
                                 <img class="p-4 sm:p-8 rounded-t-lg"
                                     src='https://source.unsplash.com/500x500/?{{ $rekomen->category->name }}'
@@ -256,7 +256,7 @@
                             @csrf
                             <input type="hidden" name="vendor_id" id="favorit" value="{{ $rekomen->id }}">
                             <button type="submit"
-                                class="absolute top-9 right-9 sm:top-8 sm:right-8 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
+                                class="absolute top-5 right-5 mt-1 sm:mt-2 mr-1 sm:mr-2 w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full bg-white border border-gray-200">
                                 <i class="fas fa-heart text-black"></i>
                             </button class="flex">
                         </form>
@@ -295,7 +295,7 @@
     </section>
 
 
-    <div class="footer bg-gray-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <div class="footer bg-red-200" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
         <div class="flex justify-between p-12">
             <!-- Resources -->
             <div class="justify-items-start">

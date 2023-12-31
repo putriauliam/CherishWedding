@@ -1,4 +1,4 @@
-<div class="footer mt-12 bg-gray-300 dark:bg-gray-900" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+<div class="footer mt-12 bg-red-200" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
     <div class="flex justify-between p-12">
         <!-- Resources -->
         <div class="justify-items-start">
