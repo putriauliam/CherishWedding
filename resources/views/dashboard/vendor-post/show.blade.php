@@ -2,125 +2,174 @@
 
 @section('container')
 <div class="p-4 sm:ml-64">
+
     
 
-    <form class="w-sm mx-auto" method="post" action="#" enctype="multipart/form-data" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-        {{-- nama --}}
-        <div class="mb-2">
-            <label for="name" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Nama
-                Lengkap</label>
-                <div>
-                    <h1>{{ $vendor->name }}</h1>
-                </div>          
-        </div>
-        {{-- slug --}}
-        <div class="mb-2">
-            <label for="slug" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Slug</label>
-            <div>
-                <h1>Data</h1>
-            </div>
-        </div>
-        {{-- kategori --}}
-        <div class="mb-2">
-            <label for="category" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Kategori</label>
-            <div>
-                <h1>{{ $vendor->category->name }}</h1>
-            </div>
-        </div>
-        {{-- kota --}}
-        <div class="mb-2">
-            <label for="city" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Kota</label>
-            <div>
-                <h1>{{ $vendor->city->name }}</h1>
-            </div>
-        </div>
-        {{-- address --}}
-        <div class="mb-2">
-            <label for="address" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Alamat Lengkap</label>
-            <div>
-                <h1>{{ $vendor->address }}</h1>
-            </div>
-            
-        </div>
-        {{-- koordinat maps --}}
-        <div class="mb-2">
-            <label for="koordinat_maps" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Koordinat Maps</label>
-            <div>
-                <h1>{{ $vendor->koordinat_maps }}</h1>
-            </div>
-            
-        </div>
-        {{-- Harga --}}
-        <div class="mb-2">
-            <label for="price" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
-            <div>
-                <h1>{{ currency_IDR($vendor->price) }}</h1>
-            </div>
-            
-        </div>
-        {{-- upload gambar --}}
-        <div class="mb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="image">Upload Gambar</label>
-            <div>
-                @if($vendor->image)
-            <div class="overflow-hidden mt-4 h-96" style="width: 877px;">
-                <img src="{{ asset('storage/' . $vendor->image) }}"
-                    alt="{{ $vendor->category->name }}"
-                    class="img-fluid rounded-lg h-full w-full object-cover" >
-            </div>
-        @else
-            <img src="https://source.unsplash.com/1200x1000?{{ $vendor->category->name }}"
-                alt="{{ $vendor->category->name }}" class="img-fluid mt-3">
-        @endif
-            </div>
-        </div>
-        {{-- profil --}}
-        <div class="mb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="image">Upload Profil</label>
-            <div>
-                @if($vendor->profil)
-                <div style="overflow: hidden;">
-                    <img src="{{ asset('storage/' . $vendor->profil) }}"
-                        alt="{{ $vendor->profil }}" class="w-8 h-8 rounded-full">
-                </div>
-            @else
-                <img src="{{ asset('storage/image/user.png' ) }}"
-                    alt="{{ $vendor->category->name }}" class="w-8 h-8 rounded-full">
-            @endif
-            </div>
-        </div>
-        {{-- email --}}
-        <div class="mb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="">Email</label>
-            <div>
-                <h1>{{ $vendor->email }}</h1>
-            </div>
-        </div>
-        {{-- instagram --}}
-        <div class="mb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="">Instagram</label>
-            <div>
-                <h1>{{ $vendor->instagram }}</h1>
-            </div>
-        </div>
-        {{-- telp --}}
-        <div class="mb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="">No Telepon</label>
-            <div>
-                <h1>{{ $vendor->telp }}</h1>
-            </div>
-        </div>
-        {{-- deskripsi --}}
-        <div class="mb-2">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="">Deskripsi Vendor</label>
-            <div>
-                <h1>{!! $vendor->detail !!}</h1>
-            </div>
-        </div>
-        <div class="flex justify-center" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-            <a href="/dataVendor" type="submit" class="text-center w-52 text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-400 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 mt-3 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
-        </div>
-    </form>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead style="background-color:rgb(249, 128, 128)" class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="text-white px-6 py-3">
+                        Judul
+                    </th>
+                    <th scope="col" class="text-white px-6 py-3">
+                        Data
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{-- nama --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="name" class="">Nama Lengkap</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->name }}</h1>
+                    </td>
+                </tr>
+                {{-- slug --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="slug" class="">Slug</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>Data</h1>
+                    </td>
+                </tr>
+                {{-- kategori --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="category" class="">Kategori</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->category->name }}</h1>
+                    </td>
+                </tr>
+                {{-- kota --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="city" class="">Kota</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->city->name }}</h1>
+                    </td>
+                </tr>
+                {{-- address --}}
+                <tr>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="address" class="">Alamat Lengkap</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->address }}</h1>
+                    </td>
+                </tr>
+                {{-- koordinat maps --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="koordinat_maps" class="">Koordinat Maps</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->koordinat_maps }}</h1>
+                    </td>
+                </tr>
+                {{-- harga --}}
+                <tr>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label for="harga" class="">Harga</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ currency_IDR($vendor->price) }}</h1>
+                    </td>
+                </tr>
+                {{-- Upload Gambar --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label class="" for="image">Upload Gambar</label>
+                    </th>
+                    <td class="px-6 py-4">
+                    <div>
+                    @if($vendor->image)
+                    <div class="overflow-hidden mt-4" style="width: 400px;">
+                        <img src="{{ asset('storage/' . $vendor->image) }}"
+                            alt="{{ $vendor->category->name }}"
+                            class="img-fluid rounded-lg h-full w-full object-cover" >
+                    </div>
+                    @else
+                        <img src="https://source.unsplash.com/1200x1000?{{ $vendor->category->name }}"
+                            alt="{{ $vendor->category->name }}" class="img-fluid mt-3">
+                    @endif
+                        </div>
+                    </td>
+                </tr>
+                {{-- Profil --}}
+                <tr>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label class="" for="image">Upload Profil</label>
+                    </th>
+                    <td class="px-6 py-4">
+                    <div>
+                    @if($vendor->profil)
+                    <div style="overflow: hidden;">
+                        <img src="{{ asset('storage/' . $vendor->profil) }}"
+                            alt="{{ $vendor->profil }}" class="w-40 h-40 rounded-full">
+                    </div>
+                    @else
+                        <img src="{{ asset('storage/image/user.png' ) }}"
+                            alt="{{ $vendor->category->name }}" class="w-40 h-40 rounded-full">
+                    @endif
+                    </div>
+                    </td>
+                </tr>
+                {{-- koordinat maps --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label class="" for="email">Email</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->email }}</h1>
+                    </td>
+                </tr>
+                {{-- Instagram --}}
+                <tr>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label class="" for="instagram">Instagram</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->instagram }}</h1>
+                    </td>
+                </tr>
+                {{-- Telp --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label class="" for="no_telp">No Telepon</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <h1>{{ $vendor->telp }}</h1>
+                    </td>
+                </tr>
+                {{-- Deskripsi --}}
+                <tr>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <label class="" for="deskripsi_vendor">Deskripsi</label>
+                    </th>
+                    <td class="px-6 py-4">
+                        <div>
+                            <h1 style="width:full">{!! $vendor->detail !!}</h1>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
+
+            <div class="mb-2">
+
+            </div>
+            <div class="flex justify-center" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                <a href="/dataVendor" type="submit" class="text-center w-52 text-white bg-red-400 border border-gray-300 focus:outline-none hover:bg-gray-400 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 mt-3 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Kembali</a>
+            </div>
+        </form>
+    </div>
 </div>
 @endsection
