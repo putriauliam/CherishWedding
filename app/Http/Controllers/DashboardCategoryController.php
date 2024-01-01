@@ -158,7 +158,7 @@ class DashboardCategoryController extends Controller
         Vendor::where('id', $vendor->id)
             ->update($validatedData);
 
-        return redirect('/dataVendor')->with('success', 'Vendor berhasil di update!');
+        return redirect('/dataVendor')->with('success', 'Vendor berhasil diperbarui!');
     }
 
     /**

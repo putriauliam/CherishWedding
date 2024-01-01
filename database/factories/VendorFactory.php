@@ -29,7 +29,7 @@ class VendorFactory extends Factory
             'category_id' => mt_rand(1,4),
             'image' => "image/banner.jpg",
             'profil' => "image/putri.png",
-            'telp' => $this->faker->phoneNumber(),
+            'telp' =>"0812". $this->faker->randomNumber(9, true),
             'email' => $this->faker->email(),
             'instagram' => $this->faker->sentence(1),
         ];
