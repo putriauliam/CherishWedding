@@ -101,7 +101,7 @@
                                 Harga
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Action
+                                Aksi
                             </th>
                         </tr>
                     </thead>

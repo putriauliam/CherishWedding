@@ -45,8 +45,8 @@
                         <h1>{{ $vendor->city->name }}</h1>
                     </td>
                 </tr>
-                {{-- address --}}
-                <tr>
+                {{-- Address --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <label for="address" class="">Alamat Lengkap</label>
                     </th>
@@ -63,8 +63,8 @@
                         <h1>{{ $vendor->koordinat_maps }}</h1>
                     </td>
                 </tr>
-                {{-- harga --}}
-                <tr>
+                {{-- Harga --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <label for="harga" class="">Harga</label>
                     </th>
@@ -92,9 +92,9 @@
                         </div>
                     </td>
                 </tr>
-                {{-- Profil --}}
-                <tr>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{-- Harga --}}
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <label class="" for="image">Upload Profil</label>
                     </th>
                     <td class="px-6 py-4">
@@ -121,7 +121,7 @@
                     </td>
                 </tr>
                 {{-- Instagram --}}
-                <tr>
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <label class="" for="instagram">Instagram</label>
                     </th>
